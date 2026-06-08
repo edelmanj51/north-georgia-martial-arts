@@ -82,7 +82,7 @@
       border: 2px solid var(--secondary);
     }
     .btn-ghost:hover {
-      background: var(--secondary); color: var(--dark);
+      background: var(--secondary); color: var(--white);
       transform: translateY(-2px); box-shadow: var(--shadow);
     }
 
@@ -306,7 +306,7 @@
     .instructor-photo { position: relative; }
     .instructor-photo img {
       width: 100%; border-radius: var(--radius-lg);
-      object-fit: cover; max-height: 500px;
+      object-fit: cover; object-position: top; max-height: 500px;
     }
     .instructor-badge {
       position: absolute; bottom: 20px; left: 20px;
@@ -350,7 +350,7 @@
     .program-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); }
     .program-body { padding: 24px; display: flex; flex-direction: column; flex: 1; gap: 12px; }
     .program-tag {
-      display: inline-block; background: var(--secondary); color: var(--dark);
+      display: inline-block; background: var(--secondary); color: var(--white);
       padding: 4px 12px; border-radius: 20px; font-size: 12px;
       font-weight: 700; text-transform: uppercase; letter-spacing: .5px;
     }
@@ -377,7 +377,7 @@
     .step-card { text-align: center; padding: 32px 24px; }
     .step-num {
       width: 60px; height: 60px; border-radius: 50%;
-      background: var(--secondary); color: var(--dark);
+      background: var(--primary); color: var(--white);
       font-size: 24px; font-weight: 900;
       display: flex; align-items: center; justify-content: center;
       margin: 0 auto 20px;
@@ -577,11 +577,11 @@
     }
     .why-card:hover { background: rgba(255,255,255,.09); transform: translateY(-3px); }
     .why-icon {
-      width: 52px; height: 52px; background: var(--secondary);
+      width: 52px; height: 52px; background: var(--primary);
       border-radius: var(--radius); display: flex; align-items: center;
       justify-content: center; margin-bottom: 20px;
     }
-    .why-icon svg { width: 26px; height: 26px; fill: var(--dark); }
+    .why-icon svg { width: 26px; height: 26px; fill: var(--white); }
     .why-card h3 { font-size: 20px; font-weight: 800; margin-bottom: 10px; }
     .why-card p  { font-size: 15px; opacity: .75; line-height: 1.65; }
 

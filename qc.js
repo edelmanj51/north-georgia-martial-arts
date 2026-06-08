@@ -249,6 +249,37 @@ if (instrPath && fs.existsSync(instrPath)) {
   bad(`INSTRUCTOR_1_PHOTO file not found at: ${instrPath}`);
 }
 
+// ── Check 15: Contrast — dark text on dark backgrounds ───────────────────────
+// Flags elements using color:var(--dark) or color:var(--dark-2) inside sections
+// known to have dark backgrounds, where --secondary is a dark color like #1a1a1a.
+// Pattern: background:var(--secondary);color:var(--dark) → always invisible when secondary is dark.
+{
+  const CONTRAST_PATTERNS = [
+    { pattern: /background:\s*var\(--secondary\);\s*color:\s*var\(--dark\)/, label: 'color:var(--dark) on var(--secondary) background' },
+    { pattern: /background:\s*var\(--secondary\)[^}]*color:\s*var\(--dark\)/, label: 'color:var(--dark) on var(--secondary) background (spread)' },
+    { pattern: /fill:\s*var\(--dark\)[^}]*\/\*[^*]*why.*icon/i, label: 'SVG fill:var(--dark) in dark section icon' },
+  ];
+  const distFiles = fs.readdirSync('dist').filter(f => f.endsWith('.html'));
+  let contrastIssues = [];
+  for (const file of distFiles) {
+    const html = fs.readFileSync(`dist/${file}`, 'utf8');
+    // Check for dark-on-dark: color:var(--dark) paired with background:var(--secondary) in same CSS rule
+    const cssBlocks = html.match(/\{[^}]*background[^}]*var\(--secondary\)[^}]*color[^}]*var\(--dark\)[^}]*\}/g) || [];
+    if (cssBlocks.length > 0) {
+      contrastIssues.push(`${file}: ${cssBlocks.length} CSS rule(s) with color:var(--dark) on var(--secondary) background`);
+    }
+    // Also check for fill:var(--dark) inside icon elements that sit on dark sections
+    if (/\.why-icon svg[^}]*fill:\s*var\(--dark\)/.test(html)) {
+      contrastIssues.push(`${file}: .why-icon svg uses fill:var(--dark) — invisible on dark background`);
+    }
+  }
+  if (contrastIssues.length > 0) {
+    contrastIssues.forEach(msg => warn(`CONTRAST: ${msg}`));
+  } else {
+    ok('No dark-text-on-dark-background contrast issues detected');
+  }
+}
+
 // ── Report ────────────────────────────────────────────────────────────────────
 console.log(pass.join('\n'));
 if (warn.length > 0) {
