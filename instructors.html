@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Coaches | [SCHOOL_NAME] in [CITY], [STATE]</title>
+  <meta name="description" content="Meet the coaching staff at [SCHOOL_NAME] — world-class instructors in Taekwondo, Brazilian Jiu-Jitsu, and Kickboxing in [CITY], [STATE].">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="[SITE_URL]/instructors.html">
+  <style>
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth;font-size:16px}
+    body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',system-ui,'Helvetica Neue',Arial,sans-serif;color:#1a1a2e;line-height:1.6;overflow-x:hidden}
+    img{max-width:100%;display:block}
+    a{text-decoration:none;color:inherit}
+    button{cursor:pointer;border:none;outline:none;font-family:inherit}
+    ul{list-style:none}
+    :root{
+      --primary:   [PRIMARY_COLOR];
+      --secondary: [SECONDARY_COLOR];
+      --dark:#0f172a;--dark-2:#1e293b;--gray:#64748b;
+      --gray-light:#e2e8f0;--light:#f8fafc;--white:#ffffff;
+      --radius:8px;--radius-lg:12px;
+      --shadow:0 4px 20px rgba(0,0,0,.10);--shadow-lg:0 8px 40px rgba(0,0,0,.15);
+      --transition:all .2s ease
+    }
+    .container{max-width:1200px;margin:0 auto;padding:0 24px}
+    .btn{display:inline-flex;align-items:center;justify-content:center;padding:14px 28px;border-radius:var(--radius);font-size:16px;font-weight:700;text-align:center;transition:var(--transition);cursor:pointer;white-space:nowrap}
+    .btn-primary{background:var(--primary);color:var(--white);border:2px solid var(--primary)}
+    .btn-primary:hover{opacity:.9;transform:translateY(-2px);box-shadow:var(--shadow)}
+    .btn-ghost{background:transparent;color:var(--white);border:2px solid rgba(255,255,255,.7)}
+    .btn-ghost:hover{background:var(--white);color:var(--dark);transform:translateY(-2px)}
+    /* ── Header ── */
+    #header{position:fixed;top:0;left:0;right:0;z-index:1000;background:var(--white);box-shadow:0 2px 20px rgba(0,0,0,.07);transition:box-shadow .3s}
+    .header-inner{display:flex;align-items:center;justify-content:space-between;height:72px;gap:20px;max-width:1200px;margin:0 auto;padding:0 24px}
+    .logo{display:flex;align-items:center;gap:10px;font-size:20px;font-weight:900;color:var(--dark);white-space:nowrap;letter-spacing:-.4px;flex-shrink:0}
+    .logo img{height:40px;width:auto}
+    #main-nav{display:flex;align-items:center;gap:4px;flex:1;justify-content:center}
+    #main-nav>a,.nav-dropdown>a{padding:8px 13px;border-radius:6px;font-weight:600;font-size:15px;color:var(--dark-2);transition:var(--transition);display:flex;align-items:center;gap:4px}
+    #main-nav>a:hover,.nav-dropdown>a:hover{background:var(--light);color:var(--primary)}
+    .nav-dropdown{position:relative}
+    .nav-dropdown>a::after{content:'▾';font-size:10px;opacity:.7}
+    .dropdown-menu{position:absolute;top:calc(100% + 8px);left:50%;transform:translateX(-50%) translateY(-8px);background:var(--white);border-radius:10px;box-shadow:var(--shadow-lg);min-width:210px;padding:8px;opacity:0;pointer-events:none;transition:opacity .2s ease,transform .2s ease}
+    .nav-dropdown.open .dropdown-menu{opacity:1;pointer-events:all;transform:translateX(-50%) translateY(0)}
+    .dropdown-menu a{display:block;padding:10px 14px;border-radius:6px;font-size:14px;font-weight:500;color:var(--dark-2);transition:var(--transition)}
+    .dropdown-menu a:hover{background:var(--light);color:var(--primary)}
+    .header-cta{padding:10px 22px;font-size:15px;flex-shrink:0}
+    .nav-toggle{display:none;flex-direction:column;gap:5px;padding:8px;background:transparent;border-radius:6px}
+    .nav-toggle span{width:22px;height:2px;background:var(--dark);transition:var(--transition);display:block}
+    .nav-toggle.active span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+    .nav-toggle.active span:nth-child(2){opacity:0}
+    .nav-toggle.active span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+    @media(max-width:900px){
+      #main-nav{display:none;position:absolute;top:72px;left:0;right:0;background:var(--white);flex-direction:column;align-items:flex-start;padding:12px 20px 20px;box-shadow:var(--shadow-lg);border-top:1px solid var(--gray-light);gap:2px}
+      #main-nav.open{display:flex}
+      #main-nav>a,.nav-dropdown>a{width:100%}
+      .nav-dropdown .dropdown-menu{position:static;transform:none;opacity:1;pointer-events:all;box-shadow:none;border-left:3px solid var(--gray-light);border-radius:0;padding:4px 0 4px 12px;min-width:auto}
+      .nav-toggle{display:flex}
+      .header-cta{display:none}
+    }
+    /* ── Reveal ── */
+    .reveal{opacity:0;transform:translateY(20px);transition:opacity .55s ease,transform .55s ease}
+    .reveal.visible{opacity:1;transform:none}
+    /* ── Page banner ── */
+    .page-banner{background:linear-gradient(135deg,#0a0a0a 0%,#1a1a1a 60%,#2a1010 100%);padding:120px 24px 64px;text-align:center;color:white}
+    .page-banner h1{font-size:clamp(32px,5vw,52px);font-weight:900;margin-bottom:14px}
+    .page-banner p{font-size:18px;opacity:.75;max-width:560px;margin:0 auto}
+    /* ── Featured instructors ── */
+    #featured{padding:80px 24px;background:var(--white)}
+    #featured .section-container{max-width:900px;margin:0 auto}
+    .section-eyebrow{display:block;font-size:13px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--primary);margin-bottom:10px}
+    .instructor-inner{display:grid;grid-template-columns:300px 1fr;gap:48px;align-items:start;max-width:900px;margin:0 auto}
+    .instructor-photo{position:relative}
+    .instructor-photo img{width:100%;border-radius:var(--radius-lg);box-shadow:var(--shadow-lg);aspect-ratio:3/4;object-fit:cover;object-position:top}
+    .instructor-badge{position:absolute;bottom:16px;left:16px;right:16px;background:var(--primary);color:white;padding:8px 12px;border-radius:var(--radius);font-size:13px;font-weight:700;text-align:center}
+    .instructor-name{font-size:clamp(24px,3vw,34px);font-weight:900;color:var(--dark);margin-bottom:6px}
+    .instructor-credential{font-size:14px;font-weight:700;color:var(--primary);text-transform:uppercase;letter-spacing:.06em;margin-bottom:16px}
+    .instructor-bio{font-size:16px;color:var(--dark-2);line-height:1.75}
+    .divider{border:none;border-top:1px solid var(--gray-light);margin:60px auto;max-width:900px}
+    @media(max-width:700px){.instructor-inner{grid-template-columns:1fr;gap:24px}}
+    /* ── Full roster grid ── */
+    #full-roster{padding:80px 24px;background:var(--light)}
+    .roster-header{text-align:center;margin-bottom:48px}
+    .roster-header h2{font-size:clamp(26px,3.5vw,38px);font-weight:900;color:var(--dark);margin-bottom:10px}
+    .roster-header p{font-size:17px;color:var(--gray)}
+    .coaches-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:28px;max-width:900px;margin:0 auto}
+    .coach-card{background:var(--white);border-radius:var(--radius-lg);overflow:hidden;box-shadow:var(--shadow);transition:transform .2s,box-shadow .2s}
+    .coach-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-lg)}
+    .coach-card img{width:100%;aspect-ratio:1/1;object-fit:cover;object-position:top}
+    .coach-info{padding:16px 18px}
+    .coach-name{font-weight:700;color:var(--dark);font-size:16px;margin-bottom:4px}
+    .coach-title{font-size:13px;color:var(--gray);line-height:1.4}
+    /* ── CTA ── */
+    .instructors-cta{background:linear-gradient(135deg,#0a0a0a,#1a1a1a);padding:80px 24px;text-align:center;color:white}
+    .instructors-cta h2{font-size:clamp(28px,4vw,44px);font-weight:900;margin-bottom:14px}
+    .instructors-cta p{font-size:18px;opacity:.8;margin-bottom:36px;max-width:540px;margin-left:auto;margin-right:auto}
+    .cta-btns{display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
+    /* ── Footer ── */
+    #footer{background:#07101e;color:rgba(255,255,255,.75);padding:64px 24px 32px}
+    .footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1.5fr;gap:48px;max-width:1200px;margin:0 auto 48px}
+    @media(max-width:900px){.footer-grid{grid-template-columns:1fr 1fr}}
+    @media(max-width:540px){.footer-grid{grid-template-columns:1fr}}
+    .footer-brand .logo{color:white;font-size:18px;margin-bottom:16px}
+    .footer-brand p{font-size:14px;line-height:1.7;margin-bottom:20px}
+    .social-links{display:flex;gap:10px}
+    .social-link{width:36px;height:36px;background:rgba(255,255,255,.1);border-radius:50%;display:flex;align-items:center;justify-content:center;transition:background .2s}
+    .social-link:hover{background:var(--primary)}
+    .social-link svg{width:16px;height:16px;fill:white}
+    .footer-col h4{font-size:14px;font-weight:700;color:white;text-transform:uppercase;letter-spacing:.06em;margin-bottom:16px}
+    .footer-col ul li{margin-bottom:10px}
+    .footer-col ul li a{font-size:14px;transition:color .2s}
+    .footer-col ul li a:hover{color:white}
+    .footer-contact-row{display:flex;align-items:flex-start;gap:10px;margin-bottom:14px;font-size:14px;line-height:1.55}
+    .footer-contact-row svg{width:16px;height:16px;fill:#60a5fa;flex-shrink:0;margin-top:2px}
+    .footer-bottom{border-top:1px solid rgba(255,255,255,.09);padding-top:24px;max-width:1200px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap}
+    .footer-bottom p{font-size:13px;opacity:.45}
+    .footer-legal{display:flex;gap:20px}
+    .footer-legal a{font-size:13px;opacity:.45;transition:opacity .2s}
+    .footer-legal a:hover{opacity:1}
+    /* ── Modals ── */
+    .modal-overlay{position:fixed;inset:0;background:rgba(0,0,0,.6);z-index:2000;display:flex;align-items:center;justify-content:center;padding:20px;opacity:0;pointer-events:none;transition:opacity .25s ease}
+    .modal-overlay.open{opacity:1;pointer-events:all}
+    .modal-box{background:var(--white);border-radius:16px;padding:36px 32px;width:100%;max-width:460px;position:relative;max-height:90vh;overflow-y:auto}
+    .modal-close{position:absolute;top:14px;right:16px;background:transparent;font-size:22px;color:var(--gray);padding:4px 8px;border-radius:4px}
+    .modal-close:hover{color:var(--dark);background:var(--light)}
+    .modal-title{font-size:22px;font-weight:800;color:var(--dark);margin-bottom:6px}
+    .modal-sub{font-size:14px;color:var(--gray);margin-bottom:22px;line-height:1.55}
+    .modal-form .field{margin-bottom:14px}
+    .modal-form label{display:block;font-size:14px;font-weight:600;color:var(--dark-2);margin-bottom:6px}
+    .modal-form input,.modal-form select{width:100%;padding:12px 14px;border-radius:var(--radius);border:1.5px solid var(--gray-light);font-size:15px;font-family:inherit;color:var(--dark);background:var(--white);transition:border-color .2s;appearance:none}
+    .modal-form input:focus,.modal-form select:focus{outline:none;border-color:var(--primary)}
+    .modal-consent{font-size:12px;color:var(--gray);margin:10px 0 20px;line-height:1.55}
+    .modal-consent a{color:var(--primary)}
+    .modal-submit{width:100%;padding:15px;background:var(--primary);color:white;border:none;border-radius:var(--radius);font-size:17px;font-weight:700;cursor:pointer;transition:var(--transition);font-family:inherit}
+    .modal-submit:hover{opacity:.9;transform:translateY(-2px);box-shadow:0 6px 24px rgba(0,0,0,.25)}
+    .modal-success{text-align:center;padding:36px 20px;display:none}
+    .success-icon{font-size:56px;margin-bottom:16px}
+    .success-title{font-size:24px;font-weight:800;color:var(--dark);margin-bottom:10px}
+    .success-body{color:var(--gray);font-size:16px;line-height:1.6}
+  </style>
+</head>
+<body>
+
+<header id="header" role="banner">
+  <div class="header-inner">
+    <a href="index.html" class="logo" aria-label="[SCHOOL_NAME] Home">
+      <img src="[LOGO_IMAGE]" alt="[SCHOOL_NAME] logo" onerror="this.style.display='none'">
+      [SCHOOL_NAME]
+    </a>
+    <nav id="main-nav" role="navigation" aria-label="Main navigation">
+      <a href="#" onclick="openModal('modal-kit');return false">Pricing</a>
+      <div class="nav-dropdown">
+        <a href="programs.html">Programs</a>
+        <div class="dropdown-menu">
+          <!-- [IF:PROGRAM_1_NAME] --><a href="program-1.html">[PROGRAM_1_NAME]</a><!-- [/IF:PROGRAM_1_NAME] -->
+          <!-- [IF:PROGRAM_2_NAME] --><a href="program-2.html">[PROGRAM_2_NAME]</a><!-- [/IF:PROGRAM_2_NAME] -->
+          <!-- [IF:PROGRAM_3_NAME] --><a href="program-3.html">[PROGRAM_3_NAME]</a><!-- [/IF:PROGRAM_3_NAME] -->
+          <!-- [IF:PROGRAM_4_NAME] --><a href="program-4.html">[PROGRAM_4_NAME]</a><!-- [/IF:PROGRAM_4_NAME] -->
+          <!-- [IF:PROGRAM_5_NAME] --><a href="program-5.html">[PROGRAM_5_NAME]</a><!-- [/IF:PROGRAM_5_NAME] -->
+          <!-- [IF:PROGRAM_6_NAME] --><a href="program-6.html">[PROGRAM_6_NAME]</a><!-- [/IF:PROGRAM_6_NAME] -->
+        </div>
+      </div>
+      <a href="quick-tour.html">Quick Tour</a>
+      <div class="nav-dropdown">
+        <a href="#">More</a>
+        <div class="dropdown-menu">
+          <a href="instructors.html">Our Coaches</a>
+          <a href="schedules.html">Class Schedule</a>
+          <a href="reviews.html">Reviews</a>
+          <a href="news.html">News</a>
+        </div>
+      </div>
+    </nav>
+    <button class="btn btn-primary header-cta" onclick="openModal('modal-trial')">Get Started</button>
+    <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<div class="page-banner">
+  <h1>Meet Our Coaching Staff</h1>
+  <p>World-class instructors in Taekwondo, Brazilian Jiu-Jitsu, and Kickboxing &mdash; proudly serving Jasper, GA since 2010.</p>
+</div>
+
+<!-- ── Featured instructors ────────────────────────────────────────────── -->
+<section id="featured">
+  <div class="section-container">
+
+    <div class="instructor-inner reveal">
+      <div class="instructor-photo">
+        <img src="[INSTRUCTOR_1_PHOTO]" alt="[INSTRUCTOR_1_NAME]" loading="lazy">
+        <div class="instructor-badge">[INSTRUCTOR_1_TITLE]</div>
+      </div>
+      <div>
+        <span class="section-eyebrow">Owner &amp; Chief Instructor</span>
+        <h2 class="instructor-name">[INSTRUCTOR_1_NAME]</h2>
+        <p class="instructor-credential">[INSTRUCTOR_1_TITLE]</p>
+        <p class="instructor-bio">[INSTRUCTOR_1_BIO]</p>
+        <div style="margin-top:28px">
+          <button class="btn btn-primary" onclick="openModal('modal-trial')">Train With Us</button>
+        </div>
+      </div>
+    </div>
+
+    <hr class="divider">
+
+    <!-- [IF:INSTRUCTOR_2_NAME] -->
+    <div class="instructor-inner reveal">
+      <div class="instructor-photo">
+        <img src="[INSTRUCTOR_2_PHOTO]" alt="[INSTRUCTOR_2_NAME]" loading="lazy">
+        <div class="instructor-badge">[INSTRUCTOR_2_TITLE]</div>
+      </div>
+      <div>
+        <span class="section-eyebrow">BJJ Department</span>
+        <h2 class="instructor-name">[INSTRUCTOR_2_NAME]</h2>
+        <p class="instructor-credential">[INSTRUCTOR_2_TITLE]</p>
+        <p class="instructor-bio">[INSTRUCTOR_2_BIO]</p>
+      </div>
+    </div>
+    <!-- [/IF:INSTRUCTOR_2_NAME] -->
+
+    <!-- [IF:INSTRUCTOR_3_NAME] -->
+    <hr class="divider">
+    <div class="instructor-inner reveal">
+      <div class="instructor-photo">
+        <img src="[INSTRUCTOR_3_PHOTO]" alt="[INSTRUCTOR_3_NAME]" loading="lazy">
+        <div class="instructor-badge">[INSTRUCTOR_3_TITLE]</div>
+      </div>
+      <div>
+        <span class="section-eyebrow">Kickboxing Department</span>
+        <h2 class="instructor-name">[INSTRUCTOR_3_NAME]</h2>
+        <p class="instructor-credential">[INSTRUCTOR_3_TITLE]</p>
+        <p class="instructor-bio">[INSTRUCTOR_3_BIO]</p>
+      </div>
+    </div>
+    <!-- [/IF:INSTRUCTOR_3_NAME] -->
+
+  </div>
+</section>
+
+<!-- ── Additional coaching staff ────────────────────────────────────────── -->
+<!-- [IF:INSTRUCTOR_4_NAME] -->
+<section id="full-roster">
+  <div class="roster-header reveal">
+    <h2>Additional Coaching Staff</h2>
+    <p>Every instructor at [SCHOOL_NAME] brings real credentials and a genuine passion for developing students.</p>
+  </div>
+  <div class="coaches-grid">
+    <div class="coach-card reveal">
+      <img src="[INSTRUCTOR_4_PHOTO]" alt="[INSTRUCTOR_4_NAME]" loading="lazy">
+      <div class="coach-info">
+        <div class="coach-name">[INSTRUCTOR_4_NAME]</div>
+        <div class="coach-title">[INSTRUCTOR_4_TITLE]</div>
+      </div>
+    </div>
+    <!-- [IF:INSTRUCTOR_5_NAME] -->
+    <div class="coach-card reveal">
+      <img src="[INSTRUCTOR_5_PHOTO]" alt="[INSTRUCTOR_5_NAME]" loading="lazy">
+      <div class="coach-info">
+        <div class="coach-name">[INSTRUCTOR_5_NAME]</div>
+        <div class="coach-title">[INSTRUCTOR_5_TITLE]</div>
+      </div>
+    </div>
+    <!-- [/IF:INSTRUCTOR_5_NAME] -->
+    <!-- [IF:INSTRUCTOR_6_NAME] -->
+    <div class="coach-card reveal">
+      <img src="[INSTRUCTOR_6_PHOTO]" alt="[INSTRUCTOR_6_NAME]" loading="lazy">
+      <div class="coach-info">
+        <div class="coach-name">[INSTRUCTOR_6_NAME]</div>
+        <div class="coach-title">[INSTRUCTOR_6_TITLE]</div>
+      </div>
+    </div>
+    <!-- [/IF:INSTRUCTOR_6_NAME] -->
+  </div>
+</section>
+<!-- [/IF:INSTRUCTOR_4_NAME] -->
+
+<!-- ── CTA ────────────────────────────────────────────────────────────── -->
+<div class="instructors-cta">
+  <h2>Ready to Train With Us?</h2>
+  <p>Your first class is completely free &mdash; no experience needed, all ages welcome.</p>
+  <div class="cta-btns">
+    <button class="btn btn-primary" onclick="openModal('modal-trial')">Book Free Trial</button>
+    <button class="btn btn-ghost" onclick="openModal('modal-kit')">Get Pricing &amp; Schedule</button>
+  </div>
+</div>
+
+<!-- ── Footer ──────────────────────────────────────────────────────────── -->
+<footer id="footer">
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <a href="index.html" class="logo" aria-label="[SCHOOL_NAME] Home">
+        <img src="[LOGO_IMAGE]" alt="[SCHOOL_NAME] logo" style="height:36px;width:auto" onerror="this.style.display='none'">
+        [SCHOOL_NAME]
+      </a>
+      <p>[SCHOOL_NAME] has been changing lives through martial arts in [CITY], [STATE] since [YEAR_FOUNDED]. World-class instruction in a safe, welcoming environment for students of all ages and experience levels.</p>
+      <div class="social-links" aria-label="Social media links">
+        <!-- [IF:FACEBOOK_URL] --><a href="[FACEBOOK_URL]" class="social-link" aria-label="Facebook" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg></a><!-- [/IF:FACEBOOK_URL] -->
+        <!-- [IF:INSTAGRAM_URL] --><a href="[INSTAGRAM_URL]" class="social-link" aria-label="Instagram" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="white" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a><!-- [/IF:INSTAGRAM_URL] -->
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4>Programs</h4>
+      <ul>
+        <!-- [IF:PROGRAM_1_NAME] --><li><a href="program-1.html">[PROGRAM_1_NAME]</a></li><!-- [/IF:PROGRAM_1_NAME] -->
+        <!-- [IF:PROGRAM_2_NAME] --><li><a href="program-2.html">[PROGRAM_2_NAME]</a></li><!-- [/IF:PROGRAM_2_NAME] -->
+        <!-- [IF:PROGRAM_3_NAME] --><li><a href="program-3.html">[PROGRAM_3_NAME]</a></li><!-- [/IF:PROGRAM_3_NAME] -->
+        <!-- [IF:PROGRAM_4_NAME] --><li><a href="program-4.html">[PROGRAM_4_NAME]</a></li><!-- [/IF:PROGRAM_4_NAME] -->
+        <!-- [IF:PROGRAM_5_NAME] --><li><a href="program-5.html">[PROGRAM_5_NAME]</a></li><!-- [/IF:PROGRAM_5_NAME] -->
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Explore</h4>
+      <ul>
+        <li><a href="index.html#faq">FAQ</a></li>
+        <li><a href="#" onclick="openModal('modal-trial');return false">Book Free Trial</a></li>
+        <li><a href="#" onclick="openModal('modal-kit');return false">Pricing &amp; Schedule</a></li>
+        <li><a href="instructors.html">Our Coaches</a></li>
+        <li><a href="schedules.html">Class Schedule</a></li>
+        <li><a href="reviews.html">Reviews</a></li>
+        <li><a href="news.html">News</a></li>
+        <li><a href="[PRIVACY_POLICY_URL]">Privacy Policy</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Contact Us</h4>
+      <address style="font-style:normal">
+        <div class="footer-contact-row"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>[ADDRESS_LINE_1]<br>[CITY], [STATE] [ZIP]</div>
+        <div class="footer-contact-row"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg><a href="tel:[PHONE]">[PHONE]</a></div>
+        <div class="footer-contact-row"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg><a href="mailto:[EMAIL]">[EMAIL]</a></div>
+        <div class="footer-contact-row"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67V7z"/></svg>[HOURS_SHORT]</div>
+      </address>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; [CURRENT_YEAR] [SCHOOL_NAME]. All rights reserved.</p>
+    <div class="footer-legal"><a href="[PRIVACY_POLICY_URL]">Privacy Policy</a><a href="#">Terms of Service</a><a href="#">Sitemap</a></div>
+  </div>
+</footer>
+
+<!-- Trial Modal -->
+<div class="modal-overlay" id="modal-trial" role="dialog" aria-modal="true" aria-labelledby="title-trial" onclick="closeOnOverlay(event,'modal-trial')">
+  <div class="modal-box">
+    <button class="modal-close" onclick="closeModal('modal-trial')" aria-label="Close">&times;</button>
+    <div id="modal-trial-body">
+      <h2 class="modal-title" id="title-trial">Book Your Free Trial</h2>
+      <p class="modal-sub">No commitment. No experience needed. Just show up and try it free.</p>
+      <form class="modal-form" onsubmit="submitModal(event,'modal-trial','[TRIAL_WEBHOOK_URL]')">
+        <input type="hidden" name="lead_source" value="trial">
+        <div class="field"><label for="tr-name">Name</label><input id="tr-name" type="text" name="name" placeholder="Your full name" required autocomplete="name"></div>
+        <div class="field"><label for="tr-email">Email</label><input id="tr-email" type="email" name="email" placeholder="your@email.com" required autocomplete="email"></div>
+        <div class="field"><label for="tr-phone">Phone</label><input id="tr-phone" type="tel" name="phone" placeholder="(555) 555-5555" required autocomplete="tel"></div>
+        <div class="field"><label for="tr-program">Program</label><select id="tr-program" name="program"><option value="" disabled selected>Select a program&hellip;</option><option value="tiny-tigers">Tiny Tigers (Ages 4–7)</option><option value="kids-tkd">Kids Taekwondo</option><option value="teens-adults-tkd">Teens &amp; Adults TKD</option><option value="bjj">Brazilian Jiu-Jitsu</option><option value="kickboxing">Kickboxing</option><option value="not-sure">Not Sure Yet</option></select></div>
+        <p class="modal-consent">By submitting you agree to receive SMS messages from [SCHOOL_NAME]. Reply STOP to unsubscribe. Msg &amp; data rates may apply. <a href="[PRIVACY_POLICY_URL]">Privacy Policy</a>.</p>
+        <button type="submit" class="modal-submit">Reserve My Free Trial &rarr;</button>
+      </form>
+    </div>
+    <div class="modal-success" id="modal-trial-success"><div class="success-icon">&#x1F94B;</div><h3 class="success-title">You&#x2019;re Booked!</h3><p class="success-body">We&#x2019;ll be in touch within 24 hours to confirm your free trial class!</p></div>
+  </div>
+</div>
+
+<!-- Starter Kit Modal -->
+<div class="modal-overlay" id="modal-kit" role="dialog" aria-modal="true" aria-labelledby="title-kit" onclick="closeOnOverlay(event,'modal-kit')">
+  <div class="modal-box">
+    <button class="modal-close" onclick="closeModal('modal-kit')" aria-label="Close">&times;</button>
+    <div id="modal-kit-body">
+      <h2 class="modal-title" id="title-kit">Get Our Pricing &amp; Schedule</h2>
+      <p class="modal-sub">Fill out the form and one of our coaches will send you our pricing, schedule, and current promo info.</p>
+      <form class="modal-form" onsubmit="submitModal(event,'modal-kit','[STARTER_KIT_WEBHOOK_URL]')">
+        <input type="hidden" name="lead_source" value="starter_kit">
+        <div class="field"><label for="kit-name">Name</label><input id="kit-name" type="text" name="name" placeholder="Your full name" required autocomplete="name"></div>
+        <div class="field"><label for="kit-email">Email</label><input id="kit-email" type="email" name="email" placeholder="your@email.com" required autocomplete="email"></div>
+        <div class="field"><label for="kit-phone">Phone</label><input id="kit-phone" type="tel" name="phone" placeholder="(555) 555-5555" required autocomplete="tel"></div>
+        <div class="field"><label for="kit-program">Program</label><select id="kit-program" name="program"><option value="" disabled selected>Select a program&hellip;</option><option value="tiny-tigers">Tiny Tigers (Ages 4–7)</option><option value="kids-tkd">Kids Taekwondo</option><option value="teens-adults-tkd">Teens &amp; Adults TKD</option><option value="bjj">Brazilian Jiu-Jitsu</option><option value="kickboxing">Kickboxing</option><option value="not-sure">Not Sure Yet</option></select></div>
+        <p class="modal-consent">By submitting you agree to receive SMS messages from [SCHOOL_NAME]. Reply STOP to unsubscribe. Msg &amp; data rates may apply. <a href="[PRIVACY_POLICY_URL]">Privacy Policy</a>.</p>
+        <button type="submit" class="modal-submit">Send Me The Info &rarr;</button>
+      </form>
+    </div>
+    <div class="modal-success" id="modal-kit-success"><div class="success-icon">&#x1F4CB;</div><h3 class="success-title">On Its Way!</h3><p class="success-body">Check your inbox &mdash; we&#x2019;re sending our full pricing guide and schedule now.</p></div>
+  </div>
+</div>
+
+<script>
+(function(){
+  'use strict';
+  var nt=document.getElementById('nav-toggle'),mn=document.getElementById('main-nav');
+  if(nt&&mn){
+    nt.addEventListener('click',function(){var o=mn.classList.toggle('open');nt.classList.toggle('active',o);nt.setAttribute('aria-expanded',o?'true':'false')});
+    mn.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){mn.classList.remove('open');nt.classList.remove('active');nt.setAttribute('aria-expanded','false')})});
+  }
+  document.querySelectorAll('.nav-dropdown').forEach(function(dd){
+    var t=null;
+    dd.addEventListener('mouseenter',function(){clearTimeout(t);dd.classList.add('open')});
+    dd.addEventListener('mouseleave',function(){t=setTimeout(function(){dd.classList.remove('open')},300)});
+  });
+  var hdr=document.getElementById('header');
+  window.addEventListener('scroll',function(){hdr.style.boxShadow=window.scrollY>10?'0 2px 28px rgba(0,0,0,.14)':'0 2px 20px rgba(0,0,0,.07)';},{passive:true});
+  if('IntersectionObserver' in window){
+    var obs=new IntersectionObserver(function(e){e.forEach(function(e){if(e.isIntersecting){e.target.classList.add('visible');obs.unobserve(e.target)}})},{threshold:0.1,rootMargin:'0px 0px -36px 0px'});
+    document.querySelectorAll('.reveal').forEach(function(el){obs.observe(el)});
+  } else { document.querySelectorAll('.reveal').forEach(function(el){el.classList.add('visible')}); }
+  window.openModal=function(id){var el=document.getElementById(id);if(!el)return;el.classList.add('open');document.body.style.overflow='hidden';var f=el.querySelector('input,select');if(f)setTimeout(function(){f.focus()},80)};
+  window.closeModal=function(id){var el=document.getElementById(id);if(!el)return;el.classList.remove('open');document.body.style.overflow=''};
+  window.closeOnOverlay=function(e,id){if(e.target===e.currentTarget)closeModal(id)};
+  document.addEventListener('keydown',function(e){if(e.key==='Escape'){document.querySelectorAll('.modal-overlay.open').forEach(function(m){m.classList.remove('open')});document.body.style.overflow=''}});
+  window.submitModal=function(e,mid,url){
+    e.preventDefault();var form=e.target,data={};new FormData(form).forEach(function(v,k){data[k]=v});
+    var btn=form.querySelector('[type=submit]');btn.textContent='Sending…';btn.disabled=true;
+    if(url&&url.charAt(0)!=='[')fetch(url,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(data)}).catch(function(){});
+    setTimeout(function(){if(mid==='modal-trial'){window.location.href='[BOOKING_CALENDAR_URL]';}else{var b=document.getElementById(mid+'-body'),s=document.getElementById(mid+'-success');if(b)b.style.display='none';if(s)s.style.display='block';}},550);
+  };
+}());
+</script>
+</body>
+</html>

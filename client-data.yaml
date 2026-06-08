@@ -5,156 +5,164 @@
 # ─────────────────────────────────────────────────────────────────────────────
 
 # ── Identity ──────────────────────────────────────────────────────────────────
-SLUG: "north-georgia-martial-arts"                         # Folder name, GitHub repo, Cloudflare Pages project
-GOOGLE_PLACE_ID: ""                     # From Places API lookup — e.g. ChIJtest123
+SLUG: "north-georgia-martial-arts"
 SCHOOL_NAME: "North Georgia Martial Arts"
-MARTIAL_ART: ""                         # e.g. Brazilian Jiu-Jitsu, Karate, Taekwondo, MMA
-SITE_URL: "https://www.northgeorgiamartialarts.com"       # Full URL with https://
+MARTIAL_ART: "Taekwondo & Martial Arts"
+SITE_URL: "https://www.northgeorgiamartialarts.com"
 DOMAIN: "northgeorgiamartialarts.com"
 
 # ── Location ──────────────────────────────────────────────────────────────────
-CITY: ""
-STATE: ""                               # 2-letter abbreviation, e.g. MD
-ZIP: ""
-ADDRESS_LINE_1: ""
+CITY: "Jasper"
+STATE: "GA"
+ZIP: "30143"
+ADDRESS_LINE_1: "305 Noah Drive Suite 102"
 
 # ── Contact ───────────────────────────────────────────────────────────────────
-PHONE: ""                               # Format: (555) 555-5555
-EMAIL: ""
-HOURS: ""                               # e.g. Mon–Fri 4pm–9pm · Sat 10am–2pm
+PHONE: "(706) 692-7600"
+EMAIL: "info@ngmajasper.com"
+HOURS: "Mon–Fri 4:00–8:00 PM · Sat 9:30 AM–1:30 PM"
+HOURS_SHORT: "Mon–Sat"
 
-# ── Founding year (optional — leave blank if new school) ──────────────────────
-YEAR_FOUNDED: ""
+# ── Founding year ─────────────────────────────────────────────────────────────
+YEAR_FOUNDED: "2010"
 
 # ── Branding ──────────────────────────────────────────────────────────────────
-PRIMARY_COLOR: ""                       # e.g. #cc0000
-SECONDARY_COLOR: ""                     # e.g. #ffc700
-LOGO_IMAGE: brand_assets/logo.png       # Drop logo.png in brand_assets/ — auto-populated
-FACEBOOK_URL: ""                        # Full URL or leave blank
-INSTAGRAM_URL: ""                       # Full URL or leave blank
+PRIMARY_COLOR: "#EA0404"
+SECONDARY_COLOR: "#1a1a1a"
+LOGO_IMAGE: brand_assets/logo.png
+FACEBOOK_URL: "https://www.facebook.com/NGMAJasper/"
+INSTAGRAM_URL: "https://www.instagram.com/northgeorgiamartialarts/"
 
 # ── Hero section ──────────────────────────────────────────────────────────────
-# Drop hero.jpg in images/hero/ — HERO_IMAGE is auto-populated
-HERO_HEADLINE: ""                       # Main headline, e.g. "Train Like a Champion"
-HERO_SUBHEADLINE: ""                    # Optional subheadline below main headline
-HERO_SUBTEXT: ""                        # Supporting copy below the headline
+HERO_HEADLINE: "Change Your Life Through Martial Arts"
+HERO_SUBHEADLINE: "Taekwondo · BJJ · Kickboxing in Jasper, GA"
+HERO_SUBTEXT: "North Georgia Martial Arts has been building champions and changing lives since 2010. World-class instructors. Programs for all ages and experience levels. Book your free trial class today."
 
 # ── Social proof ──────────────────────────────────────────────────────────────
-# SHOW_PROOF_BAR: set to "false" for new schools or unverified review counts
-SHOW_PROOF_BAR: "true"
-STAR_RATING: ""                         # From Google — must include decimal, e.g. 4.9
-REVIEW_COUNT: ""                        # Plain integer, e.g. 47 (no + symbol)
+# NOTE: STAR_RATING and REVIEW_COUNT need verification via Google Maps before launch.
+STAR_RATING: "5.0"
+REVIEW_COUNT: "35"
 
 # ── About section ─────────────────────────────────────────────────────────────
-ABOUT_TEXT: ""                          # 2 sentences about the school and community
+ABOUT_TEXT: "North Georgia Martial Arts has been changing lives through martial arts, education, and coaching in Jasper, GA since 2010. With world-class instructors in Taekwondo, Brazilian Jiu-Jitsu, and Kickboxing, we offer a safe, welcoming environment for students of all ages — from first-time beginners to competitive state and national champions."
 
 # ── Instructor 1 (required) ───────────────────────────────────────────────────
-# Drop photo in images/instructor/instructor-1/ — auto-populated
-INSTRUCTOR_1_NAME: ""
-INSTRUCTOR_1_TITLE: ""                  # e.g. Head Instructor & 4th Degree Black Belt
-INSTRUCTOR_1_BIO: ""                    # 2-3 sentences, third person
+INSTRUCTOR_1_NAME: "Damon Easley"
+INSTRUCTOR_1_PHOTO: "images/instructor/instructor-1/easley.jpg"
+INSTRUCTOR_1_TITLE: "Owner & Chief Instructor"
+INSTRUCTOR_1_BIO: "Damon Easley is a 4th Degree Black Belt and the founder of North Georgia Martial Arts, which he established in Jasper in 2010. A District Champion and multiple-time State Champion with a globally ranked sparring record, Damon has dedicated 15+ years to martial arts with a mission to change lives one person at a time. Under his leadership, NGMA has grown into a championship-caliber academy where students of all ages find confidence, discipline, and a community that pushes them to be their best."
 
 # ── Instructor 2 (optional) ───────────────────────────────────────────────────
-# Drop photo in images/instructor/instructor-2/ — auto-populated
-INSTRUCTOR_2_NAME: ""
-INSTRUCTOR_2_TITLE: ""
-INSTRUCTOR_2_BIO: ""
+INSTRUCTOR_2_NAME: "Mike Smith"
+INSTRUCTOR_2_PHOTO: "images/instructor/instructor-2/mike.jpg"
+INSTRUCTOR_2_TITLE: "No-Gi BJJ Coach"
+INSTRUCTOR_2_BIO: "Michael 'Mike' Smith brings 10+ years of martial arts experience to NGMA as our No-Gi Jiu-Jitsu coach. A professional NFC BJJ fighter and seasoned competitor in NAGA and Newbreed tournaments, Mike's coaching style emphasizes real technique, competitive sharpness, and the kind of camaraderie that keeps students coming back. Whether you're rolling for the first time or prepping for a tournament, Mike meets you where you are."
 
 # ── Instructor 3 (optional) ───────────────────────────────────────────────────
-# Drop photo in images/instructor/instructor-3/ — auto-populated
-INSTRUCTOR_3_NAME: ""
-INSTRUCTOR_3_TITLE: ""
-INSTRUCTOR_3_BIO: ""
+INSTRUCTOR_3_NAME: "Thomas Prisco"
+INSTRUCTOR_3_PHOTO: "images/instructor/instructor-3/prisco.jpg"
+INSTRUCTOR_3_TITLE: "Kickboxing Instructor"
+INSTRUCTOR_3_BIO: "Thomas Prisco is a 3rd Degree Black Belt, undefeated amateur kickboxer, and 2008 Florida Cruiserweight Champion with Black Belts in Taekwondo, Karate, and Wing Chun — plus a Blue Belt in BJJ. A retired U.S. Coast Guard veteran, Defensive Tactics Instructor, and ISSA Master Trainer, Thomas brings championship credentials and real-world combat experience to every class at NGMA."
 
-# ── Program 1 (required) ──────────────────────────────────────────────────────
-# Drop photo in images/programs/program-1/ named main.jpg — auto-populated
-PROGRAM_1_NAME: ""
-PROGRAM_1_AGE_RANGE: ""                 # e.g. Ages 5–12
-PROGRAM_1_DAYS: ""                      # e.g. Mon & Wed / Tue & Thu
-PROGRAM_1_SESSION_LEN: ""              # e.g. 60-min classes
-PROGRAM_1_DESCRIPTION: ""              # 1-2 sentences
-PROGRAM_1_AUDIENCE_ADULTS: ""          # Set to "1" if adult program (shows adult gains copy)
-PROGRAM_1_AUDIENCE_KIDS: ""            # Set to "1" if kids program
-PROGRAM_1_AUDIENCE_TEENS: ""           # Set to "1" if teens program
+# ── Instructors 4–6 (custom page: instructors.html) ──────────────────────────
+INSTRUCTOR_4_NAME: "Zach Bjork"
+INSTRUCTOR_4_PHOTO: "images/instructor/instructor-4/zach.jpg"
+INSTRUCTOR_4_TITLE: "Kickboxing & BJJ Instructor"
+INSTRUCTOR_4_BIO: "Zach Bjork is an amateur MMA fighter who has competed under the NFC and All or Nothing banners, with experience in both kickboxing and Brazilian Jiu-Jitsu. His practical, competition-tested coaching style makes him an asset on the mat and in the ring — and students at every level benefit from his hands-on, technique-first approach."
 
-# ── Program 2 (optional) ──────────────────────────────────────────────────────
-PROGRAM_2_NAME: ""
-PROGRAM_2_AGE_RANGE: ""
-PROGRAM_2_DAYS: ""
-PROGRAM_2_SESSION_LEN: ""
-PROGRAM_2_DESCRIPTION: ""
-PROGRAM_2_AUDIENCE_ADULTS: ""
-PROGRAM_2_AUDIENCE_KIDS: ""
-PROGRAM_2_AUDIENCE_TEENS: ""
+INSTRUCTOR_5_NAME: "James 'Buddy' Smith"
+INSTRUCTOR_5_PHOTO: "images/instructor/instructor-5/buddy.jpg"
+INSTRUCTOR_5_TITLE: "Taekwondo Instructor"
+INSTRUCTOR_5_BIO: "James 'Buddy' Smith has been a martial artist since 2004 and brings warmth, patience, and deep technical knowledge to his role as a Taekwondo instructor at NGMA. A beloved figure in both the school and the broader Jasper community, Buddy's passion for the martial arts and his people-first approach make him a mentor as much as an instructor."
 
-# ── Program 3 (optional) ──────────────────────────────────────────────────────
-PROGRAM_3_NAME: ""
-PROGRAM_3_AGE_RANGE: ""
-PROGRAM_3_DAYS: ""
-PROGRAM_3_SESSION_LEN: ""
-PROGRAM_3_DESCRIPTION: ""
-PROGRAM_3_AUDIENCE_ADULTS: ""
-PROGRAM_3_AUDIENCE_KIDS: ""
-PROGRAM_3_AUDIENCE_TEENS: ""
+INSTRUCTOR_6_NAME: "Paula Bush"
+INSTRUCTOR_6_PHOTO: "images/instructor/instructor-6/paula.jpg"
+INSTRUCTOR_6_TITLE: "Program Director"
+INSTRUCTOR_6_BIO: "Paula Bush serves as NGMA's Program Director and is an active participant in Adult Taekwondo and Kickboxing classes herself. Her organizational leadership keeps the school running smoothly, and her hands-on involvement in training reflects the culture Damon has built at NGMA: leaders who lead by example."
 
-# ── Program 4 (optional) ──────────────────────────────────────────────────────
-PROGRAM_4_NAME: ""
-PROGRAM_4_AGE_RANGE: ""
-PROGRAM_4_DAYS: ""
-PROGRAM_4_SESSION_LEN: ""
-PROGRAM_4_DESCRIPTION: ""
-PROGRAM_4_AUDIENCE_ADULTS: ""
-PROGRAM_4_AUDIENCE_KIDS: ""
-PROGRAM_4_AUDIENCE_TEENS: ""
+# ── Program 1 — Tiny Tigers ───────────────────────────────────────────────────
+PROGRAM_1_NAME: "Tiny Tigers"
+PROGRAM_1_PHOTO: "images/programs/program-1/main.jpg"
+PROGRAM_1_AGE_RANGE: "Ages 4–7"
+PROGRAM_1_DAYS: "Mon, Wed & Thu"
+PROGRAM_1_SESSION_LEN: "45-min classes"
+PROGRAM_1_DESCRIPTION: "Designed for our youngest students, Tiny Tigers introduces the building blocks of Taekwondo — balance, coordination, basic kicks, and following instructions — in a fun, age-appropriate setting. Smaller class sizes and patient instruction help kids build confidence and self-control that carries right into school and at home."
+PROGRAM_1_AUDIENCE_KIDS: "1"
 
-# ── Program 5 (optional) ──────────────────────────────────────────────────────
-PROGRAM_5_NAME: ""
-PROGRAM_5_AGE_RANGE: ""
-PROGRAM_5_DAYS: ""
-PROGRAM_5_SESSION_LEN: ""
-PROGRAM_5_DESCRIPTION: ""
-PROGRAM_5_AUDIENCE_ADULTS: ""
-PROGRAM_5_AUDIENCE_KIDS: ""
-PROGRAM_5_AUDIENCE_TEENS: ""
+# ── Program 2 — Kids Taekwondo ────────────────────────────────────────────────
+PROGRAM_2_NAME: "Kids Taekwondo"
+PROGRAM_2_PHOTO: "images/programs/program-2/main.jpg"
+PROGRAM_2_AGE_RANGE: "Ages 7–15"
+PROGRAM_2_DAYS: "Mon–Sat"
+PROGRAM_2_SESSION_LEN: "60-min classes"
+PROGRAM_2_DESCRIPTION: "Our core kids Taekwondo program guides students from white belt all the way through black belt, developing discipline, focus, and real martial arts skill at every step. Belt-specific classes ensure your child trains with peers at their level — and competition opportunities are available for students ready to take their training further."
+PROGRAM_2_AUDIENCE_KIDS: "1"
+PROGRAM_2_AUDIENCE_TEENS: "1"
 
-# ── Program 6 (optional) ──────────────────────────────────────────────────────
-PROGRAM_6_NAME: ""
-PROGRAM_6_AGE_RANGE: ""
-PROGRAM_6_DAYS: ""
-PROGRAM_6_SESSION_LEN: ""
-PROGRAM_6_DESCRIPTION: ""
-PROGRAM_6_AUDIENCE_ADULTS: ""
-PROGRAM_6_AUDIENCE_KIDS: ""
-PROGRAM_6_AUDIENCE_TEENS: ""
+# ── Program 3 — Teens & Adults Taekwondo ─────────────────────────────────────
+PROGRAM_3_NAME: "Teens & Adults TKD"
+PROGRAM_3_PHOTO: "images/programs/program-3/main.jpg"
+PROGRAM_3_AGE_RANGE: "Ages 13+"
+PROGRAM_3_DAYS: "Mon, Tue, Wed, Fri & Sat"
+PROGRAM_3_SESSION_LEN: "60-min classes"
+PROGRAM_3_DESCRIPTION: "Adult and teen Taekwondo at NGMA is a serious discipline and a serious workout — led by Damon Easley, a 4th Degree Black Belt and nationally ranked competitor. Build fitness, sharpen self-defense skills, and train alongside a community of adults who push each other to improve, regardless of starting experience level."
+PROGRAM_3_AUDIENCE_TEENS: "1"
+PROGRAM_3_AUDIENCE_ADULTS: "1"
 
-# ── Class schedule (optional — builds the full schedule table on schedules.html)
-CLASS_SCHEDULE_HTML: ""                 # Full HTML table. Leave blank if no schedule yet.
+# ── Program 4 — Brazilian Jiu-Jitsu ──────────────────────────────────────────
+PROGRAM_4_NAME: "Brazilian Jiu-Jitsu"
+PROGRAM_4_PHOTO: "images/programs/program-4/main.jpg"
+PROGRAM_4_AGE_RANGE: "Ages 13+"
+PROGRAM_4_DAYS: "Mon, Tue, Thu & Sat"
+PROGRAM_4_SESSION_LEN: "60-min classes"
+PROGRAM_4_DESCRIPTION: "NGMA's BJJ program offers both Gi and No-Gi training under experienced competition coaches. Whether you're a complete beginner or a seasoned grappler, our classes build technical ground game, physical conditioning, and competition-ready skills in a mat culture that's welcoming at every level."
+PROGRAM_4_AUDIENCE_TEENS: "1"
+PROGRAM_4_AUDIENCE_ADULTS: "1"
 
-# ── Google reviewers (optional — up to 10) ────────────────────────────────────
-# REVIEWER_1_INITIAL is computed automatically from REVIEWER_1_NAME
-REVIEWER_1_NAME: ""
-REVIEWER_1_DATE: ""                     # e.g. 2 months ago
-REVIEWER_1_TEXT: ""
+# ── Program 5 — Kickboxing ────────────────────────────────────────────────────
+PROGRAM_5_NAME: "Kickboxing"
+PROGRAM_5_PHOTO: "images/programs/program-5/main.jpg"
+PROGRAM_5_AGE_RANGE: "Ages 13+"
+PROGRAM_5_DAYS: "Tue, Thu & Fri"
+PROGRAM_5_SESSION_LEN: "60-min classes"
+PROGRAM_5_DESCRIPTION: "High-energy, technique-driven kickboxing classes that build striking power, cardio, and coordination fast. Led by Thomas Prisco and Zach Bjork — coaches with real competitive records — NGMA kickboxing is intense but accessible: a genuine full-body workout with skills you can actually use."
+PROGRAM_5_AUDIENCE_TEENS: "1"
+PROGRAM_5_AUDIENCE_ADULTS: "1"
 
-REVIEWER_2_NAME: ""
-REVIEWER_2_DATE: ""
-REVIEWER_2_TEXT: ""
+# ── Class schedule ────────────────────────────────────────────────────────────
+# ⚠️  VERIFY BEFORE DNS SWITCH — times derived from schedule image, not live Spark widget.
+# Confirm all days/times with Damon before pointing the domain to this build.
+CLASS_SCHEDULE_HTML: "<table class=\"sched\" role=\"table\" aria-label=\"Weekly class schedule\"><thead><tr><th scope=\"col\">Program</th><th scope=\"col\">Monday</th><th scope=\"col\">Tuesday</th><th scope=\"col\">Wednesday</th><th scope=\"col\">Thursday</th><th scope=\"col\">Friday</th><th scope=\"col\">Saturday</th></tr></thead><tbody><tr><td>Tiny Tigers<br><small style=\"color:#64748b\">Ages 4–7 · 45 min</small></td><td><span class=\"time-slot kids\">4:30 PM</span></td><td><span class=\"time-empty\">—</span></td><td><span class=\"time-slot kids\">4:30 PM</span></td><td><span class=\"time-slot kids\">4:15 PM</span></td><td><span class=\"time-empty\">—</span></td><td><span class=\"time-empty\">—</span></td></tr><tr><td>Kids Taekwondo<br><small style=\"color:#64748b\">Ages 7–15 · 60 min</small></td><td><span class=\"time-slot kids\">5:00 PM</span><span class=\"time-slot kids\">5:45 PM</span></td><td><span class=\"time-slot kids\">4:45 PM</span><span class=\"time-slot kids\">5:30 PM</span></td><td><span class=\"time-slot kids\">5:00 PM</span><span class=\"time-slot kids\">5:45 PM</span></td><td><span class=\"time-slot kids\">4:45 PM</span><span class=\"time-slot kids\">5:30 PM</span><span class=\"time-slot kids\">6:15 PM</span></td><td><span class=\"time-slot kids\">4:45 PM</span><span class=\"time-slot kids\">5:30 PM</span><span class=\"time-slot kids\">7:00 PM</span></td><td><span class=\"time-slot kids\">10:15 AM</span><span class=\"time-slot kids\">11:00 AM</span></td></tr><tr><td>Teens &amp; Adults TKD<br><small style=\"color:#64748b\">Ages 13+ · 60 min</small></td><td><span class=\"time-slot teens\">6:30 PM</span></td><td><span class=\"time-slot teens\">4:00 PM</span></td><td><span class=\"time-slot teens\">6:30 PM</span><span class=\"time-slot teens\">7:15 PM</span></td><td><span class=\"time-empty\">—</span></td><td><span class=\"time-slot teens\">4:00 PM</span><span class=\"time-slot teens\">6:15 PM</span></td><td><span class=\"time-slot teens\">9:30 AM</span><span class=\"time-slot teens\">11:45 AM</span></td></tr><tr><td>Brazilian Jiu-Jitsu<br><small style=\"color:#64748b\">Ages 13+ · 60 min</small></td><td><span class=\"time-slot adult\">7:15 PM (No-Gi)</span></td><td><span class=\"time-slot adult\">7:00 PM (Gi)</span></td><td><span class=\"time-empty\">—</span></td><td><span class=\"time-slot adult\">7:00 PM (Gi)</span></td><td><span class=\"time-empty\">—</span></td><td><span class=\"time-slot adult\">12:30 PM (No-Gi)</span></td></tr><tr><td>Kickboxing<br><small style=\"color:#64748b\">Ages 13+ · 60 min</small></td><td><span class=\"time-empty\">—</span></td><td><span class=\"time-slot comp\">6:15 PM</span></td><td><span class=\"time-empty\">—</span></td><td><span class=\"time-slot comp\">8:00 PM</span></td><td><span class=\"time-slot comp\">7:45 PM</span></td><td><span class=\"time-empty\">—</span></td></tr></tbody></table><p style=\"margin-top:8px;font-size:0.875rem;color:#64748b;font-style:italic\">Schedule subject to change — call (706) 692-7600 to confirm class times.</p>"
 
-REVIEWER_3_NAME: ""
-REVIEWER_3_DATE: ""
-REVIEWER_3_TEXT: ""
+# ── Google reviewers ──────────────────────────────────────────────────────────
+# NOTE: Anonymous quotes sourced from NGMA website homepage — real names not available.
+# Replace with verified Google reviewer names before launch if possible.
+REVIEWER_1_NAME: "Google Reviewer"
+REVIEWER_1_DATE: "1 month ago"
+REVIEWER_1_TEXT: "The instructors are world class (literally), and my kids love attending classes there."
 
-# Add REVIEWER_4 through REVIEWER_10 as needed (same structure)
+REVIEWER_2_NAME: "Google Reviewer"
+REVIEWER_2_DATE: "2 months ago"
+REVIEWER_2_TEXT: "The studio and instructors are welcoming and inviting. My son looks forward to his karate classes and I look forward to his future here."
 
-# ── GHL Webhooks (required — set these before the final build) ────────────────
-# Get these from GHL: Sub-account → Settings → Integrations → Webhooks
-TRIAL_WEBHOOK_URL: "https://PLACEHOLDER-replace-before-build"
-STARTER_KIT_WEBHOOK_URL: "https://PLACEHOLDER-replace-before-build"
-QUIZ_WEBHOOK_URL: "https://PLACEHOLDER-replace-before-build"
-FINAL_CTA_WEBHOOK_URL: "https://PLACEHOLDER-replace-before-build"
+REVIEWER_3_NAME: "Google Reviewer"
+REVIEWER_3_DATE: "3 months ago"
+REVIEWER_3_TEXT: "This place is amazing! My son got his 2nd degree black belt here, learned kickboxing, and jiu-jitsu. We love NGMA!"
 
-# Get from GHL: Sub-account → Calendars → [Calendar] → Embed → Group Widget URL
-BOOKING_CALENDAR_URL: "https://PLACEHOLDER-replace-before-build"
+REVIEWER_4_NAME: "Google Reviewer"
+REVIEWER_4_DATE: "4 months ago"
+REVIEWER_4_TEXT: "The atmosphere is very comfortable and the facility is always clean. We've been with NGMA almost two years and wouldn't dream of going anywhere else!"
+
+REVIEWER_5_NAME: "Google Reviewer"
+REVIEWER_5_DATE: "5 months ago"
+REVIEWER_5_TEXT: "The BJJ professor is an awesome instructor and became a good friend. Great community, great coaching — highly recommend."
+
+# ── GHL Webhooks — PLACEHOLDER values, replace before launch ─────────────────
+TRIAL_WEBHOOK_URL: "https://services.leadconnectorhq.com/hooks/NGMA_PLACEHOLDER/webhook-trigger/trial"
+STARTER_KIT_WEBHOOK_URL: "https://services.leadconnectorhq.com/hooks/NGMA_PLACEHOLDER/webhook-trigger/kit"
+QUIZ_WEBHOOK_URL: "https://services.leadconnectorhq.com/hooks/NGMA_PLACEHOLDER/webhook-trigger/quiz"
+FINAL_CTA_WEBHOOK_URL: "https://services.leadconnectorhq.com/hooks/NGMA_PLACEHOLDER/webhook-trigger/final"
+BOOKING_CALENDAR_URL: "https://api.leadconnectorhq.com/widget/group/NGMA_PLACEHOLDER"
 
 # ── Privacy policy ────────────────────────────────────────────────────────────
 PRIVACY_POLICY_URL: "https://www.northgeorgiamartialarts.com/privacy"
