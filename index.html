@@ -245,7 +245,7 @@
     .mission-inner h2 {
       font-size: clamp(22px, 3.5vw, 34px); font-weight: 800; letter-spacing: -.5px;
     }
-    .mission-inner h2 em { color: var(--secondary); font-style: normal; }
+    .mission-inner h2 em { color: var(--primary); font-style: normal; }
     .mission-inner p { margin-top: 10px; font-size: 16px; opacity: .7; }
 
     /* ============================================================
@@ -491,7 +491,7 @@
       font-size: clamp(30px, 5vw, 54px); font-weight: 900; line-height: 1.1;
       margin-bottom: 16px;
     }
-    .final-inner h2 em { color: var(--secondary); font-style: normal; }
+    .final-inner h2 em { color: var(--primary); font-style: normal; }
     .final-inner > p { font-size: 17px; opacity: .8; margin-bottom: 36px; }
     .final-form { background: rgba(255,255,255,.06); border-radius: var(--radius-lg); padding: 32px; }
     .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 12px; }
@@ -533,7 +533,7 @@
     }
     .social-link:hover { background: var(--primary); transform: translateY(-2px); }
     .social-link svg { width: 18px; height: 18px; fill: white; }
-    .footer-col h4 { font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 16px; opacity: .5; }
+    .footer-col h3 { font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 16px; opacity: .5; }
     .footer-col ul { display: flex; flex-direction: column; gap: 10px; }
     .footer-col ul a { font-size: 14px; opacity: .7; transition: var(--transition); }
     .footer-col ul a:hover { opacity: 1; color: var(--secondary); }
@@ -548,7 +548,7 @@
       border-top: 1px solid rgba(255,255,255,.08);
       padding: 20px 0; max-width: 1200px; margin: 0 auto;
       display: flex; justify-content: space-between; align-items: center;
-      font-size: 13px; opacity: .45; flex-wrap: wrap; gap: 10px;
+      font-size: 13px; opacity: .55; flex-wrap: wrap; gap: 10px;
     }
     .footer-legal { display: flex; gap: 20px; }
     .footer-legal a:hover { opacity: 1; }
@@ -673,8 +673,8 @@
 <header id="header" role="banner">
   <div class="header-inner">
 
-    <a href="#" class="logo" aria-label="[SCHOOL_NAME] Home">
-      <img src="[LOGO_IMAGE]" alt="[SCHOOL_NAME] logo" onerror="this.style.display='none'">
+    <a href="#" class="logo">
+      <img src="[LOGO_IMAGE]" alt="" aria-hidden="true" onerror="this.style.display='none'">
       [SCHOOL_NAME]
     </a>
 
@@ -1485,8 +1485,8 @@
   <div class="footer-grid">
 
     <div class="footer-brand">
-      <a href="#" class="logo" aria-label="[SCHOOL_NAME] Home">
-        <img src="[LOGO_IMAGE]" alt="[SCHOOL_NAME] logo" style="height:36px;width:auto" onerror="this.style.display='none'">
+      <a href="#" class="logo">
+        <img src="[LOGO_IMAGE]" alt="" aria-hidden="true" style="height:36px;width:auto" onerror="this.style.display='none'">
         [SCHOOL_NAME]
       </a>
       <p>[SCHOOL_NAME]<!-- [IF:YEAR_FOUNDED] --> has been [CITY]'s trusted [MARTIAL_ART] school since [YEAR_FOUNDED] and<!-- [/IF:YEAR_FOUNDED] --> develops confidence, discipline, and real self-defense skills in students of all ages and experience levels.</p>
@@ -1505,7 +1505,7 @@
     </div>
 
     <div class="footer-col">
-      <h4>Programs</h4>
+      <h3>Programs</h3>
       <ul>
         <!-- [IF:PROGRAM_1_NAME] --><li><a href="program-1.html">[PROGRAM_1_NAME]</a></li><!-- [/IF:PROGRAM_1_NAME] -->
         <!-- [IF:PROGRAM_2_NAME] --><li><a href="program-2.html">[PROGRAM_2_NAME]</a></li><!-- [/IF:PROGRAM_2_NAME] -->
@@ -1517,7 +1517,7 @@
     </div>
 
     <div class="footer-col">
-      <h4>Useful Links</h4>
+      <h3>Useful Links</h3>
       <ul>
         <li><a href="#faq">FAQ</a></li>
         <li><a href="#" onclick="openModal('modal-trial');return false">Book Free Trial</a></li>
@@ -1529,7 +1529,7 @@
     </div>
 
     <div class="footer-col">
-      <h4>Contact Us</h4>
+      <h3>Contact Us</h3>
       <address style="font-style:normal">
         <div class="footer-contact-row">
           <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>

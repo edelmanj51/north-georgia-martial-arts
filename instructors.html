@@ -106,7 +106,7 @@
     .social-link{width:36px;height:36px;background:rgba(255,255,255,.1);border-radius:50%;display:flex;align-items:center;justify-content:center;transition:background .2s}
     .social-link:hover{background:var(--primary)}
     .social-link svg{width:16px;height:16px;fill:white}
-    .footer-col h4{font-size:14px;font-weight:700;color:white;text-transform:uppercase;letter-spacing:.06em;margin-bottom:16px}
+    .footer-col h3{font-size:14px;font-weight:700;color:white;text-transform:uppercase;letter-spacing:.06em;margin-bottom:16px}
     .footer-col ul li{margin-bottom:10px}
     .footer-col ul li a{font-size:14px;transition:color .2s}
     .footer-col ul li a:hover{color:white}
@@ -143,8 +143,8 @@
 
 <header id="header" role="banner">
   <div class="header-inner">
-    <a href="index.html" class="logo" aria-label="[SCHOOL_NAME] Home">
-      <img src="[LOGO_IMAGE]" alt="[SCHOOL_NAME] logo" onerror="this.style.display='none'">
+    <a href="index.html" class="logo">
+      <img src="[LOGO_IMAGE]" alt="" aria-hidden="true" onerror="this.style.display='none'">
       [SCHOOL_NAME]
     </a>
     <nav id="main-nav" role="navigation" aria-label="Main navigation">
@@ -332,6 +332,14 @@
         <div class="coach-title">2nd Degree Black Belt</div>
       </div>
     </div>
+    <div class="coach-card reveal">
+      <img src="images/instructor/kait/kait.jpg" alt="Kait" loading="lazy">
+      <div class="coach-info">
+        <div class="coach-name">Kait</div>
+        <div class="coach-title">Chief Motivator &middot; Master of Tail Wags &middot; Black Belt in Belly Rubs</div>
+        <p class="coach-bio">Kait has been the official spirit animal of NGMA since day one, greeting students with boundless enthusiasm and zero judgment. She holds a perfect attendance record and has never lost a morale competition. If you're having a rough day, Kait knows.</p>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -360,7 +368,7 @@
       </div>
     </div>
     <div class="footer-col">
-      <h4>Programs</h4>
+      <h3>Programs</h3>
       <ul>
         <!-- [IF:PROGRAM_1_NAME] --><li><a href="program-1.html">[PROGRAM_1_NAME]</a></li><!-- [/IF:PROGRAM_1_NAME] -->
         <!-- [IF:PROGRAM_2_NAME] --><li><a href="program-2.html">[PROGRAM_2_NAME]</a></li><!-- [/IF:PROGRAM_2_NAME] -->
@@ -370,7 +378,7 @@
       </ul>
     </div>
     <div class="footer-col">
-      <h4>Explore</h4>
+      <h3>Explore</h3>
       <ul>
         <li><a href="index.html#faq">FAQ</a></li>
         <li><a href="#" onclick="openModal('modal-trial');return false">Book Free Trial</a></li>
@@ -383,7 +391,7 @@
       </ul>
     </div>
     <div class="footer-col">
-      <h4>Contact Us</h4>
+      <h3>Contact Us</h3>
       <address style="font-style:normal">
         <div class="footer-contact-row"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>[ADDRESS_LINE_1]<br>[CITY], [STATE] [ZIP]</div>
         <div class="footer-contact-row"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg><a href="tel:[PHONE]">[PHONE]</a></div>
@@ -410,7 +418,7 @@
         <div class="field"><label for="tr-name">Name</label><input id="tr-name" type="text" name="name" placeholder="Your full name" required autocomplete="name"></div>
         <div class="field"><label for="tr-email">Email</label><input id="tr-email" type="email" name="email" placeholder="your@email.com" required autocomplete="email"></div>
         <div class="field"><label for="tr-phone">Phone</label><input id="tr-phone" type="tel" name="phone" placeholder="(555) 555-5555" required autocomplete="tel"></div>
-        <div class="field"><label for="tr-program">Program</label><select id="tr-program" name="program"><option value="" disabled selected>Select a program&hellip;</option><option value="tiny-tigers">Tiny Tigers (Ages 4–7)</option><option value="kids-tkd">Kids Taekwondo</option><option value="teens-adults-tkd">Teens &amp; Adults TKD</option><option value="bjj">Brazilian Jiu-Jitsu</option><option value="kickboxing">Kickboxing</option><option value="not-sure">Not Sure Yet</option></select></div>
+        <div class="field"><label for="tr-program">Program</label><select id="tr-program" name="program"><option value="" disabled selected>Select a program&hellip;</option><option value="tiny-tigers">Tiny Tigers (Ages 4–7)</option><option value="kids-ma">Kids Martial Arts (Ages 7–15)</option><option value="adult-ma">Adult Martial Arts</option><option value="adult-bjj">Adult BJJ</option><option value="adult-kickboxing">Adult Kickboxing</option><option value="birthday">Birthday Parties</option><option value="not-sure">Not Sure Yet</option></select></div>
         <p class="modal-consent">By submitting you agree to receive SMS messages from [SCHOOL_NAME]. Reply STOP to unsubscribe. Msg &amp; data rates may apply. <a href="[PRIVACY_POLICY_URL]">Privacy Policy</a>.</p>
         <button type="submit" class="modal-submit">Reserve My Free Trial &rarr;</button>
       </form>
@@ -431,7 +439,7 @@
         <div class="field"><label for="kit-name">Name</label><input id="kit-name" type="text" name="name" placeholder="Your full name" required autocomplete="name"></div>
         <div class="field"><label for="kit-email">Email</label><input id="kit-email" type="email" name="email" placeholder="your@email.com" required autocomplete="email"></div>
         <div class="field"><label for="kit-phone">Phone</label><input id="kit-phone" type="tel" name="phone" placeholder="(555) 555-5555" required autocomplete="tel"></div>
-        <div class="field"><label for="kit-program">Program</label><select id="kit-program" name="program"><option value="" disabled selected>Select a program&hellip;</option><option value="tiny-tigers">Tiny Tigers (Ages 4–7)</option><option value="kids-tkd">Kids Taekwondo</option><option value="teens-adults-tkd">Teens &amp; Adults TKD</option><option value="bjj">Brazilian Jiu-Jitsu</option><option value="kickboxing">Kickboxing</option><option value="not-sure">Not Sure Yet</option></select></div>
+        <div class="field"><label for="kit-program">Program</label><select id="kit-program" name="program"><option value="" disabled selected>Select a program&hellip;</option><option value="tiny-tigers">Tiny Tigers (Ages 4–7)</option><option value="kids-ma">Kids Martial Arts (Ages 7–15)</option><option value="adult-ma">Adult Martial Arts</option><option value="adult-bjj">Adult BJJ</option><option value="adult-kickboxing">Adult Kickboxing</option><option value="birthday">Birthday Parties</option><option value="not-sure">Not Sure Yet</option></select></div>
         <p class="modal-consent">By submitting you agree to receive SMS messages from [SCHOOL_NAME]. Reply STOP to unsubscribe. Msg &amp; data rates may apply. <a href="[PRIVACY_POLICY_URL]">Privacy Policy</a>.</p>
         <button type="submit" class="modal-submit">Send Me The Info &rarr;</button>
       </form>

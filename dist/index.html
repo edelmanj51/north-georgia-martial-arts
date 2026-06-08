@@ -245,7 +245,7 @@
     .mission-inner h2 {
       font-size: clamp(22px, 3.5vw, 34px); font-weight: 800; letter-spacing: -.5px;
     }
-    .mission-inner h2 em { color: var(--secondary); font-style: normal; }
+    .mission-inner h2 em { color: var(--primary); font-style: normal; }
     .mission-inner p { margin-top: 10px; font-size: 16px; opacity: .7; }
 
     /* ============================================================
@@ -491,7 +491,7 @@
       font-size: clamp(30px, 5vw, 54px); font-weight: 900; line-height: 1.1;
       margin-bottom: 16px;
     }
-    .final-inner h2 em { color: var(--secondary); font-style: normal; }
+    .final-inner h2 em { color: var(--primary); font-style: normal; }
     .final-inner > p { font-size: 17px; opacity: .8; margin-bottom: 36px; }
     .final-form { background: rgba(255,255,255,.06); border-radius: var(--radius-lg); padding: 32px; }
     .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 12px; }
@@ -533,7 +533,7 @@
     }
     .social-link:hover { background: var(--primary); transform: translateY(-2px); }
     .social-link svg { width: 18px; height: 18px; fill: white; }
-    .footer-col h4 { font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 16px; opacity: .5; }
+    .footer-col h3 { font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 16px; opacity: .5; }
     .footer-col ul { display: flex; flex-direction: column; gap: 10px; }
     .footer-col ul a { font-size: 14px; opacity: .7; transition: var(--transition); }
     .footer-col ul a:hover { opacity: 1; color: var(--secondary); }
@@ -548,7 +548,7 @@
       border-top: 1px solid rgba(255,255,255,.08);
       padding: 20px 0; max-width: 1200px; margin: 0 auto;
       display: flex; justify-content: space-between; align-items: center;
-      font-size: 13px; opacity: .45; flex-wrap: wrap; gap: 10px;
+      font-size: 13px; opacity: .55; flex-wrap: wrap; gap: 10px;
     }
     .footer-legal { display: flex; gap: 20px; }
     .footer-legal a:hover { opacity: 1; }
@@ -673,8 +673,8 @@
 <header id="header" role="banner">
   <div class="header-inner">
 
-    <a href="#" class="logo" aria-label="North Georgia Martial Arts Home">
-      <img src="brand_assets/logo.png" alt="North Georgia Martial Arts logo" onerror="this.style.display='none'">
+    <a href="#" class="logo">
+      <img src="brand_assets/logo.png" alt="" aria-hidden="true" onerror="this.style.display='none'">
       North Georgia Martial Arts
     </a>
 
@@ -685,11 +685,11 @@
         <a href="programs.html">Programs</a>
         <div class="dropdown-menu">
           <a href="program-1.html">Tiny Tigers</a>
-          <a href="program-2.html">Kids Taekwondo</a>
-          <a href="program-3.html">Teens & Adults TKD</a>
-          <a href="program-4.html">Brazilian Jiu-Jitsu</a>
-          <a href="program-5.html">Kickboxing</a>
-          
+          <a href="program-2.html">Kids Martial Arts</a>
+          <a href="program-3.html">Adult Martial Arts</a>
+          <a href="program-4.html">Adult BJJ</a>
+          <a href="program-5.html">Adult Kickboxing</a>
+          <a href="program-6.html">Birthday Parties</a>
         </div>
       </div>
 
@@ -872,7 +872,7 @@
       <div class="program-body">
         <span class="program-tag">Ages 4–7</span>
         <h3>Tiny Tigers</h3>
-        <p>Designed for our youngest students, Tiny Tigers introduces the building blocks of Taekwondo — balance, coordination, basic kicks, and following instructions — in a fun, age-appropriate setting. Smaller class sizes and patient instruction help kids build confidence and self-control that carries right into school and at home.</p>
+        <p>Built for our littlest students, Tiny Tigers introduces the fundamentals of martial arts — balance, coordination, focus, and following instructions — in a structured, age-appropriate environment. Patient instruction and smaller class sizes help kids build confidence, self-control, and the kind of respect that carries right into school and at home.</p>
         <div class="program-meta">
           <span>Mon, Wed & Thu</span>
           <span>45-min classes</span>
@@ -883,11 +883,11 @@
 
     
     <article class="program-card reveal">
-      <img src="images/programs/program-2/main.jpg" alt="Kids Taekwondo at North Georgia Martial Arts" loading="lazy" style="width:100%;height:220px;object-fit:cover;display:block">
+      <img src="images/programs/program-2/main.jpg" alt="Kids Martial Arts at North Georgia Martial Arts" loading="lazy" style="width:100%;height:220px;object-fit:cover;display:block">
       <div class="program-body">
         <span class="program-tag">Ages 7–15</span>
-        <h3>Kids Taekwondo</h3>
-        <p>Our core kids Taekwondo program guides students from white belt all the way through black belt, developing discipline, focus, and real martial arts skill at every step. Belt-specific classes ensure your child trains with peers at their level — and competition opportunities are available for students ready to take their training further.</p>
+        <h3>Kids Martial Arts</h3>
+        <p>Our core kids program develops focus, discipline, and real martial arts skill — guiding students from white belt to black belt and beyond. Belt-level classes keep every child training with peers at their level, and competition opportunities are available for students ready to take their training further.</p>
         <div class="program-meta">
           <span>Mon–Sat</span>
           <span>60-min classes</span>
@@ -899,11 +899,11 @@
 
     
     <article class="program-card reveal">
-      <img src="images/programs/program-3/main.jpg" alt="Teens & Adults TKD at North Georgia Martial Arts" loading="lazy" style="width:100%;height:220px;object-fit:cover;display:block">
+      <img src="images/programs/program-3/main.jpg" alt="Adult Martial Arts at North Georgia Martial Arts" loading="lazy" style="width:100%;height:220px;object-fit:cover;display:block">
       <div class="program-body">
-        <span class="program-tag">Ages 13+</span>
-        <h3>Teens & Adults TKD</h3>
-        <p>Adult and teen Taekwondo at NGMA is a serious discipline and a serious workout — led by Damon Easley, a 4th Degree Black Belt and nationally ranked competitor. Build fitness, sharpen self-defense skills, and train alongside a community of adults who push each other to improve, regardless of starting experience level.</p>
+        <span class="program-tag">Ages 16+</span>
+        <h3>Adult Martial Arts</h3>
+        <p>A serious discipline and a serious workout — led by Damon Easley, a 4th Degree Black Belt and nationally ranked competitor. Build real fitness, develop practical self-defense skills, and train in a community of adults who push each other to improve. No prior experience needed.</p>
         <div class="program-meta">
           <span>Mon, Tue, Wed, Fri & Sat</span>
           <span>60-min classes</span>
@@ -915,11 +915,11 @@
 
     
     <article class="program-card reveal">
-      <img src="images/programs/program-4/main.jpg" alt="Brazilian Jiu-Jitsu at North Georgia Martial Arts" loading="lazy" style="width:100%;height:220px;object-fit:cover;display:block">
+      <img src="images/programs/program-4/main.jpg" alt="Adult BJJ at North Georgia Martial Arts" loading="lazy" style="width:100%;height:220px;object-fit:cover;display:block">
       <div class="program-body">
-        <span class="program-tag">Ages 13+</span>
-        <h3>Brazilian Jiu-Jitsu</h3>
-        <p>NGMA's BJJ program offers both Gi and No-Gi training under experienced competition coaches. Whether you're a complete beginner or a seasoned grappler, our classes build technical ground game, physical conditioning, and competition-ready skills in a mat culture that's welcoming at every level.</p>
+        <span class="program-tag">Ages 16+</span>
+        <h3>Adult BJJ</h3>
+        <p>Gi and No-Gi Brazilian Jiu-Jitsu under experienced competition coaches. Classes cover the fundamentals of BJJ through specific drilling and live training — open to all skill levels, from complete beginners to seasoned grapplers. A mat culture that's welcoming, competitive, and built to help you actually improve.</p>
         <div class="program-meta">
           <span>Mon, Tue, Thu & Sat</span>
           <span>60-min classes</span>
@@ -931,11 +931,11 @@
 
     
     <article class="program-card reveal">
-      <img src="images/programs/program-5/main.jpg" alt="Kickboxing at North Georgia Martial Arts" loading="lazy" style="width:100%;height:220px;object-fit:cover;display:block">
+      <img src="images/programs/program-5/main.jpg" alt="Adult Kickboxing at North Georgia Martial Arts" loading="lazy" style="width:100%;height:220px;object-fit:cover;display:block">
       <div class="program-body">
-        <span class="program-tag">Ages 13+</span>
-        <h3>Kickboxing</h3>
-        <p>High-energy, technique-driven kickboxing classes that build striking power, cardio, and coordination fast. Led by Thomas Prisco and Zach Bjork — coaches with real competitive records — NGMA kickboxing is intense but accessible: a genuine full-body workout with skills you can actually use.</p>
+        <span class="program-tag">Ages 16+</span>
+        <h3>Adult Kickboxing</h3>
+        <p>High-energy kickboxing that builds striking power, cardio, and real self-defense — so much fun it's addicting. Led by Thomas Prisco and Zach Bjork, coaches with real competitive records. No experience needed. Whether you're training for fitness or developing your striking game, NGMA kickboxing delivers.</p>
         <div class="program-meta">
           <span>Tue, Thu & Fri</span>
           <span>60-min classes</span>
@@ -945,6 +945,20 @@
     </article>
     
 
+    
+    <article class="program-card reveal">
+      <img src="images/programs/program-6/main.jpg" alt="Birthday Parties at North Georgia Martial Arts" loading="lazy" style="width:100%;height:220px;object-fit:cover;display:block">
+      <div class="program-body">
+        <span class="program-tag">Special Events</span>
+        <h3>Birthday Parties</h3>
+        <p>Celebrate with an action-packed martial arts birthday party at NGMA. Kids kick, punch, and jump their way through an exciting martial arts adventure while our instructors keep everyone entertained. We handle decorations, snacks, and the fun — parents can relax and enjoy. An unforgettable party they'll talk about for years.</p>
+        <div class="program-meta">
+          <span>By appointment</span>
+          <span>Full event</span>
+        </div>
+        <button class="btn btn-primary" onclick="openModal('modal-trial')">Book Free Trial</button>
+      </div>
+    </article>
     
 
   </div>
@@ -1281,11 +1295,11 @@
           <select name="program" aria-label="Interested program">
             <option value="" disabled selected>Interested In…</option>
             <option value="program-1">Tiny Tigers</option>
-            <option value="program-2">Kids Taekwondo</option>
-            <option value="program-3">Teens & Adults TKD</option>
-            <option value="program-4">Brazilian Jiu-Jitsu</option>
-            <option value="program-5">Kickboxing</option>
-            
+            <option value="program-2">Kids Martial Arts</option>
+            <option value="program-3">Adult Martial Arts</option>
+            <option value="program-4">Adult BJJ</option>
+            <option value="program-5">Adult Kickboxing</option>
+            <option value="program-6">Birthday Parties</option>
             <option value="not-sure">Not Sure Yet</option>
           </select>
         </div>
@@ -1308,8 +1322,8 @@
   <div class="footer-grid">
 
     <div class="footer-brand">
-      <a href="#" class="logo" aria-label="North Georgia Martial Arts Home">
-        <img src="brand_assets/logo.png" alt="North Georgia Martial Arts logo" style="height:36px;width:auto" onerror="this.style.display='none'">
+      <a href="#" class="logo">
+        <img src="brand_assets/logo.png" alt="" aria-hidden="true" style="height:36px;width:auto" onerror="this.style.display='none'">
         North Georgia Martial Arts
       </a>
       <p>North Georgia Martial Arts has been Jasper's trusted Taekwondo & Martial Arts school since 2010 and develops confidence, discipline, and real self-defense skills in students of all ages and experience levels.</p>
@@ -1328,19 +1342,19 @@
     </div>
 
     <div class="footer-col">
-      <h4>Programs</h4>
+      <h3>Programs</h3>
       <ul>
         <li><a href="program-1.html">Tiny Tigers</a></li>
-        <li><a href="program-2.html">Kids Taekwondo</a></li>
-        <li><a href="program-3.html">Teens & Adults TKD</a></li>
-        <li><a href="program-4.html">Brazilian Jiu-Jitsu</a></li>
-        <li><a href="program-5.html">Kickboxing</a></li>
-        
+        <li><a href="program-2.html">Kids Martial Arts</a></li>
+        <li><a href="program-3.html">Adult Martial Arts</a></li>
+        <li><a href="program-4.html">Adult BJJ</a></li>
+        <li><a href="program-5.html">Adult Kickboxing</a></li>
+        <li><a href="program-6.html">Birthday Parties</a></li>
       </ul>
     </div>
 
     <div class="footer-col">
-      <h4>Useful Links</h4>
+      <h3>Useful Links</h3>
       <ul>
         <li><a href="#faq">FAQ</a></li>
         <li><a href="#" onclick="openModal('modal-trial');return false">Book Free Trial</a></li>
@@ -1352,7 +1366,7 @@
     </div>
 
     <div class="footer-col">
-      <h4>Contact Us</h4>
+      <h3>Contact Us</h3>
       <address style="font-style:normal">
         <div class="footer-contact-row">
           <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
@@ -1416,11 +1430,11 @@
           <select id="tr-program" name="program">
             <option value="" disabled selected>Select a program…</option>
             <option value="program-1">Tiny Tigers</option>
-            <option value="program-2">Kids Taekwondo</option>
-            <option value="program-3">Teens & Adults TKD</option>
-            <option value="program-4">Brazilian Jiu-Jitsu</option>
-            <option value="program-5">Kickboxing</option>
-            
+            <option value="program-2">Kids Martial Arts</option>
+            <option value="program-3">Adult Martial Arts</option>
+            <option value="program-4">Adult BJJ</option>
+            <option value="program-5">Adult Kickboxing</option>
+            <option value="program-6">Birthday Parties</option>
             <option value="not-sure">Not Sure</option>
           </select>
         </div>
@@ -1472,11 +1486,11 @@
           <select id="kit-program" name="program">
             <option value="" disabled selected>Select a program…</option>
             <option value="program-1">Tiny Tigers</option>
-            <option value="program-2">Kids Taekwondo</option>
-            <option value="program-3">Teens & Adults TKD</option>
-            <option value="program-4">Brazilian Jiu-Jitsu</option>
-            <option value="program-5">Kickboxing</option>
-            
+            <option value="program-2">Kids Martial Arts</option>
+            <option value="program-3">Adult Martial Arts</option>
+            <option value="program-4">Adult BJJ</option>
+            <option value="program-5">Adult Kickboxing</option>
+            <option value="program-6">Birthday Parties</option>
             <option value="not-sure">Not Sure</option>
           </select>
         </div>
