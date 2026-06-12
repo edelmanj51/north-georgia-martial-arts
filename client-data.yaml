@@ -80,46 +80,57 @@ INSTRUCTOR_6_PHOTO: "images/instructor/instructor-6/paula.jpg"
 INSTRUCTOR_6_TITLE: "Program Director"
 INSTRUCTOR_6_BIO: "Paula Bush serves as NGMA's Program Director and is an active participant in Adult Taekwondo and Kickboxing classes herself. Her organizational leadership keeps the school running smoothly, and her hands-on involvement in training reflects the culture Damon has built at NGMA: leaders who lead by example."
 
-# ── Program 1 — Kids Martial Arts (merged, ages 4–13) ────────────────────────
-PROGRAM_1_NAME: "Kids Martial Arts"
+# ── Program 1 — Tiny Tigers ───────────────────────────────────────────────────
+PROGRAM_1_NAME: "Tiny Tigers"
 PROGRAM_1_PHOTO: "images/programs/program-1/main.jpg"
-PROGRAM_1_AGE_RANGE: "Ages 4–13"
+PROGRAM_1_AGE_RANGE: "Ages 4–6"
 PROGRAM_1_DAYS: "Mon–Sat"
-PROGRAM_1_SESSION_LEN: "45–60 min classes"
-PROGRAM_1_DESCRIPTION: "From a child's very first class to black belt and beyond — NGMA's kids program takes students ages 4 through 13 from beginner to competitor. Younger students get the patient instruction and smaller class sizes they need to build confidence and coordination. Older kids progress through a structured belt system alongside peers at their level, with competition opportunities available for those ready to take their training further."
+PROGRAM_1_SESSION_LEN: "30–45 min classes"
+PROGRAM_1_DESCRIPTION: "Designed for children ages 4–6, Tiny Tigers is where the martial arts journey begins. With smaller class sizes and patient, experienced instructors, every session is crafted to match the energy and learning pace of young children. Students develop coordination, balance, and focus through fun, age-appropriate activities — while building the confidence and social skills that carry into school and life. No prior experience needed, and no rushing: every child progresses at their own pace in a nurturing environment built just for them."
 PROGRAM_1_AUDIENCE_KIDS: "1"
 
-# ── Program 2 — Adult Martial Arts ───────────────────────────────────────────
-PROGRAM_2_NAME: "Adult Martial Arts"
-PROGRAM_2_PHOTO: "images/programs/program-2/main.jpg"
-PROGRAM_2_AGE_RANGE: "Ages 14+"
-PROGRAM_2_DAYS: "Mon, Tue, Wed, Fri & Sat"
-PROGRAM_2_SESSION_LEN: "60-min classes"
-PROGRAM_2_DESCRIPTION: "A serious discipline and a serious workout — led by Damon Easley, a 4th Degree Black Belt and nationally ranked competitor. Build real fitness, develop practical self-defense skills, and train in a community of adults who push each other to improve. No prior experience needed."
-PROGRAM_2_AUDIENCE_ADULTS: "1"
+# ── Program 2 — Kids Martial Arts ────────────────────────────────────────────
+# NOTE: Using the same photo as Tiny Tigers (images/programs/program-1/main.jpg)
+# — only one kids photo is available. Flag to Joe if a second image is needed.
+PROGRAM_2_NAME: "Kids Martial Arts"
+PROGRAM_2_PHOTO: "images/programs/program-1/main.jpg"
+PROGRAM_2_AGE_RANGE: "Ages 7–13"
+PROGRAM_2_DAYS: "Mon–Sat"
+PROGRAM_2_SESSION_LEN: "45 min classes"
+PROGRAM_2_DESCRIPTION: "Structured, high-energy classes built for kids ages 7–13 who are ready to take their training seriously. Students progress through a real belt curriculum — earning each rank by demonstrating technique, focus, and maturity. For those who want to compete, NGMA offers tournament preparation and has produced state and national champions. Whether your child trains for fitness, self-defense, or the podium, Kids Martial Arts builds the discipline and drive to succeed at every level."
+PROGRAM_2_AUDIENCE_KIDS: "1"
 
-# ── Program 3 — Adult BJJ ─────────────────────────────────────────────────────
-PROGRAM_3_NAME: "Adult BJJ"
-PROGRAM_3_PHOTO: "images/programs/program-3/main.jpg"
+# ── Program 3 — Adult Martial Arts ───────────────────────────────────────────
+PROGRAM_3_NAME: "Adult Martial Arts"
+PROGRAM_3_PHOTO: "images/programs/program-2/main.jpg"
 PROGRAM_3_AGE_RANGE: "Ages 14+"
-PROGRAM_3_DAYS: "Mon, Tue, Thu & Sat"
+PROGRAM_3_DAYS: "Mon, Tue, Wed, Fri & Sat"
 PROGRAM_3_SESSION_LEN: "60-min classes"
-PROGRAM_3_DESCRIPTION: "Gi and No-Gi Brazilian Jiu-Jitsu under experienced competition coaches. Classes cover the fundamentals of BJJ through specific drilling and live training — open to all skill levels, from complete beginners to seasoned grapplers. A mat culture that's welcoming, competitive, and built to help you actually improve."
+PROGRAM_3_DESCRIPTION: "A serious discipline and a serious workout — led by Damon Easley, a 4th Degree Black Belt and nationally ranked competitor. Build real fitness, develop practical self-defense skills, and train in a community of adults who push each other to improve. No prior experience needed."
 PROGRAM_3_AUDIENCE_ADULTS: "1"
 
-# ── Program 4 — Adult Kickboxing ──────────────────────────────────────────────
-PROGRAM_4_NAME: "Adult Kickboxing"
-PROGRAM_4_PHOTO: "images/programs/program-4/main.jpg"
+# ── Program 4 — Adult BJJ ─────────────────────────────────────────────────────
+PROGRAM_4_NAME: "Adult BJJ"
+PROGRAM_4_PHOTO: "images/programs/program-3/main.jpg"
 PROGRAM_4_AGE_RANGE: "Ages 14+"
-PROGRAM_4_DAYS: "Tue, Thu & Fri"
+PROGRAM_4_DAYS: "Mon, Tue, Thu & Sat"
 PROGRAM_4_SESSION_LEN: "60-min classes"
-PROGRAM_4_DESCRIPTION: "High-energy kickboxing that builds striking power, cardio, and real self-defense — so much fun it's addicting. Led by Thomas Prisco and Zach Bjork, coaches with real competitive records. No experience needed. Whether you're training for fitness or developing your striking game, NGMA kickboxing delivers."
+PROGRAM_4_DESCRIPTION: "Gi and No-Gi Brazilian Jiu-Jitsu under experienced competition coaches. Classes cover the fundamentals of BJJ through specific drilling and live training — open to all skill levels, from complete beginners to seasoned grapplers. A mat culture that's welcoming, competitive, and built to help you actually improve."
 PROGRAM_4_AUDIENCE_ADULTS: "1"
+
+# ── Program 5 — Adult Kickboxing ──────────────────────────────────────────────
+PROGRAM_5_NAME: "Adult Kickboxing"
+PROGRAM_5_PHOTO: "images/programs/program-4/main.jpg"
+PROGRAM_5_AGE_RANGE: "Ages 14+"
+PROGRAM_5_DAYS: "Tue, Thu & Fri"
+PROGRAM_5_SESSION_LEN: "60-min classes"
+PROGRAM_5_DESCRIPTION: "High-energy kickboxing that builds striking power, cardio, and real self-defense — so much fun it's addicting. Led by Thomas Prisco and Zach Bjork, coaches with real competitive records. No experience needed. Whether you're training for fitness or developing your striking game, NGMA kickboxing delivers."
+PROGRAM_5_AUDIENCE_ADULTS: "1"
 
 # ── Class schedule ────────────────────────────────────────────────────────────
 # ⚠️  VERIFY BEFORE DNS SWITCH — times derived from schedule image, not live Spark widget.
 # Confirm all days/times with Damon before pointing the domain to this build.
-CLASS_SCHEDULE_HTML: "<table class=\"sched\" role=\"table\" aria-label=\"Weekly class schedule\"><thead><tr><th scope=\"col\">Program</th><th scope=\"col\">Monday</th><th scope=\"col\">Tuesday</th><th scope=\"col\">Wednesday</th><th scope=\"col\">Thursday</th><th scope=\"col\">Friday</th><th scope=\"col\">Saturday</th></tr></thead><tbody><tr><td>Kids Martial Arts<br><small style=\"color:#64748b\">Ages 4–13 · 45–60 min</small></td><td><span class=\"time-slot kids\">4:30 PM</span><span class=\"time-slot kids\">5:00 PM</span><span class=\"time-slot kids\">5:45 PM</span></td><td><span class=\"time-slot kids\">4:45 PM</span><span class=\"time-slot kids\">5:30 PM</span></td><td><span class=\"time-slot kids\">4:30 PM</span><span class=\"time-slot kids\">5:00 PM</span><span class=\"time-slot kids\">5:45 PM</span></td><td><span class=\"time-slot kids\">4:15 PM</span><span class=\"time-slot kids\">4:45 PM</span><span class=\"time-slot kids\">5:30 PM</span><span class=\"time-slot kids\">6:15 PM</span></td><td><span class=\"time-slot kids\">4:45 PM</span><span class=\"time-slot kids\">5:30 PM</span><span class=\"time-slot kids\">7:00 PM</span></td><td><span class=\"time-slot kids\">10:15 AM</span><span class=\"time-slot kids\">11:00 AM</span></td></tr><tr><td>Adult Martial Arts<br><small style=\"color:#64748b\">Ages 14+ · 60 min</small></td><td><span class=\"time-slot teens\">6:30 PM</span></td><td><span class=\"time-slot teens\">4:00 PM</span></td><td><span class=\"time-slot teens\">6:30 PM</span><span class=\"time-slot teens\">7:15 PM</span></td><td><span class=\"time-empty\">—</span></td><td><span class=\"time-slot teens\">4:00 PM</span><span class=\"time-slot teens\">6:15 PM</span></td><td><span class=\"time-slot teens\">9:30 AM</span><span class=\"time-slot teens\">11:45 AM</span></td></tr><tr><td>Adult BJJ<br><small style=\"color:#64748b\">Ages 14+ · 60 min</small></td><td><span class=\"time-slot adult\">7:15 PM (No-Gi)</span></td><td><span class=\"time-slot adult\">7:00 PM (Gi)</span></td><td><span class=\"time-empty\">—</span></td><td><span class=\"time-slot adult\">7:00 PM (Gi)</span></td><td><span class=\"time-empty\">—</span></td><td><span class=\"time-slot adult\">12:30 PM (No-Gi)</span></td></tr><tr><td>Adult Kickboxing<br><small style=\"color:#64748b\">Ages 14+ · 60 min</small></td><td><span class=\"time-empty\">—</span></td><td><span class=\"time-slot comp\">6:15 PM</span></td><td><span class=\"time-empty\">—</span></td><td><span class=\"time-slot comp\">8:00 PM</span></td><td><span class=\"time-slot comp\">7:45 PM</span></td><td><span class=\"time-empty\">—</span></td></tr></tbody></table><p style=\"margin-top:8px;font-size:0.875rem;color:#64748b;font-style:italic\">Schedule subject to change — call (706) 692-7600 to confirm class times.</p>"
+CLASS_SCHEDULE_HTML: "<table class=\"sched\" role=\"table\" aria-label=\"Weekly class schedule\"><thead><tr><th scope=\"col\">Program</th><th scope=\"col\">Monday</th><th scope=\"col\">Tuesday</th><th scope=\"col\">Wednesday</th><th scope=\"col\">Thursday</th><th scope=\"col\">Friday</th><th scope=\"col\">Saturday</th></tr></thead><tbody><tr><td>Tiny Tigers<br><small style=\"color:#64748b\">Ages 4–6 · 30–45 min</small></td><td><span class=\"time-slot kids\">4:30 PM</span><span class=\"time-slot kids\">5:00 PM</span><span class=\"time-slot kids\">5:45 PM</span></td><td><span class=\"time-slot kids\">4:45 PM</span><span class=\"time-slot kids\">5:30 PM</span></td><td><span class=\"time-slot kids\">4:30 PM</span><span class=\"time-slot kids\">5:00 PM</span><span class=\"time-slot kids\">5:45 PM</span></td><td><span class=\"time-slot kids\">4:15 PM</span><span class=\"time-slot kids\">4:45 PM</span><span class=\"time-slot kids\">5:30 PM</span><span class=\"time-slot kids\">6:15 PM</span></td><td><span class=\"time-slot kids\">4:45 PM</span><span class=\"time-slot kids\">5:30 PM</span><span class=\"time-slot kids\">7:00 PM</span></td><td><span class=\"time-slot kids\">10:15 AM</span><span class=\"time-slot kids\">11:00 AM</span></td></tr><tr><td>Kids Martial Arts<br><small style=\"color:#64748b\">Ages 7–13 · 45 min</small></td><td><span class=\"time-slot kids\">4:30 PM</span><span class=\"time-slot kids\">5:00 PM</span><span class=\"time-slot kids\">5:45 PM</span></td><td><span class=\"time-slot kids\">4:45 PM</span><span class=\"time-slot kids\">5:30 PM</span></td><td><span class=\"time-slot kids\">4:30 PM</span><span class=\"time-slot kids\">5:00 PM</span><span class=\"time-slot kids\">5:45 PM</span></td><td><span class=\"time-slot kids\">4:15 PM</span><span class=\"time-slot kids\">4:45 PM</span><span class=\"time-slot kids\">5:30 PM</span><span class=\"time-slot kids\">6:15 PM</span></td><td><span class=\"time-slot kids\">4:45 PM</span><span class=\"time-slot kids\">5:30 PM</span><span class=\"time-slot kids\">7:00 PM</span></td><td><span class=\"time-slot kids\">10:15 AM</span><span class=\"time-slot kids\">11:00 AM</span></td></tr><tr><td>Adult Martial Arts<br><small style=\"color:#64748b\">Ages 14+ · 60 min</small></td><td><span class=\"time-slot teens\">6:30 PM</span></td><td><span class=\"time-slot teens\">4:00 PM</span></td><td><span class=\"time-slot teens\">6:30 PM</span><span class=\"time-slot teens\">7:15 PM</span></td><td><span class=\"time-empty\">—</span></td><td><span class=\"time-slot teens\">4:00 PM</span><span class=\"time-slot teens\">6:15 PM</span></td><td><span class=\"time-slot teens\">9:30 AM</span><span class=\"time-slot teens\">11:45 AM</span></td></tr><tr><td>Adult BJJ<br><small style=\"color:#64748b\">Ages 14+ · 60 min</small></td><td><span class=\"time-slot adult\">7:15 PM (No-Gi)</span></td><td><span class=\"time-slot adult\">7:00 PM (Gi)</span></td><td><span class=\"time-empty\">—</span></td><td><span class=\"time-slot adult\">7:00 PM (Gi)</span></td><td><span class=\"time-empty\">—</span></td><td><span class=\"time-slot adult\">12:30 PM (No-Gi)</span></td></tr><tr><td>Adult Kickboxing<br><small style=\"color:#64748b\">Ages 14+ · 60 min</small></td><td><span class=\"time-empty\">—</span></td><td><span class=\"time-slot comp\">6:15 PM</span></td><td><span class=\"time-empty\">—</span></td><td><span class=\"time-slot comp\">8:00 PM</span></td><td><span class=\"time-slot comp\">7:45 PM</span></td><td><span class=\"time-empty\">—</span></td></tr></tbody></table><p style=\"margin-top:8px;font-size:0.875rem;color:#64748b;font-style:italic\">Schedule subject to change — call (706) 692-7600 to confirm class times.</p>"
 
 # ── Google reviewers ──────────────────────────────────────────────────────────
 # NOTE: Anonymous quotes sourced from NGMA website homepage — real names not available.
