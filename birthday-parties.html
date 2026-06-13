@@ -230,6 +230,7 @@
       <h2 style="font-size:24px;font-weight:800;color:#0f172a;margin-bottom:6px">Book Your Free Trial Today</h2>
       <p style="font-size:15px;color:#64748b;margin-bottom:28px">No commitment. No experience needed. Just show up and try it free.</p>
       <form style="display:flex;flex-direction:column;gap:16px" onsubmit="submitModal(event,'modal-trial','[TRIAL_WEBHOOK_URL]')">
+        <input type="hidden" name="lead_source" value="trial">
         <div><label style="display:block;font-size:14px;font-weight:600;color:#1e293b;margin-bottom:6px" for="tr-fn">First Name</label><input id="tr-fn" type="text" name="first_name" placeholder="First Name" required autocomplete="given-name" style="width:100%;padding:12px 14px;border-radius:8px;border:1.5px solid #e2e8f0;font-size:15px;font-family:inherit;color:#0f172a"></div>
         <div><label style="display:block;font-size:14px;font-weight:600;color:#1e293b;margin-bottom:6px" for="tr-ln">Last Name</label><input id="tr-ln" type="text" name="last_name" placeholder="Last Name" required autocomplete="family-name" style="width:100%;padding:12px 14px;border-radius:8px;border:1.5px solid #e2e8f0;font-size:15px;font-family:inherit;color:#0f172a"></div>
         <div><label style="display:block;font-size:14px;font-weight:600;color:#1e293b;margin-bottom:6px" for="tr-email">Email</label><input id="tr-email" type="email" name="email" placeholder="your@email.com" required autocomplete="email" style="width:100%;padding:12px 14px;border-radius:8px;border:1.5px solid #e2e8f0;font-size:15px;font-family:inherit;color:#0f172a"></div>
@@ -250,6 +251,7 @@
       <h2 style="font-size:24px;font-weight:800;color:#0f172a;margin-bottom:6px">Looking For Our Pricing?</h2>
       <p style="font-size:15px;color:#64748b;margin-bottom:28px">Fill out the form and one of our coaches will send you our full pricing and schedule.</p>
       <form style="display:flex;flex-direction:column;gap:16px" onsubmit="submitModal(event,'modal-kit','[STARTER_KIT_WEBHOOK_URL]')">
+        <input type="hidden" name="lead_source" value="starter_kit">
         <div><label style="display:block;font-size:14px;font-weight:600;color:#1e293b;margin-bottom:6px" for="kit-fn">First Name</label><input id="kit-fn" type="text" name="first_name" placeholder="First Name" required autocomplete="given-name" style="width:100%;padding:12px 14px;border-radius:8px;border:1.5px solid #e2e8f0;font-size:15px;font-family:inherit;color:#0f172a"></div>
         <div><label style="display:block;font-size:14px;font-weight:600;color:#1e293b;margin-bottom:6px" for="kit-ln">Last Name</label><input id="kit-ln" type="text" name="last_name" placeholder="Last Name" required autocomplete="family-name" style="width:100%;padding:12px 14px;border-radius:8px;border:1.5px solid #e2e8f0;font-size:15px;font-family:inherit;color:#0f172a"></div>
         <div><label style="display:block;font-size:14px;font-weight:600;color:#1e293b;margin-bottom:6px" for="kit-email">Email</label><input id="kit-email" type="email" name="email" placeholder="your@email.com" required autocomplete="email" style="width:100%;padding:12px 14px;border-radius:8px;border:1.5px solid #e2e8f0;font-size:15px;font-family:inherit;color:#0f172a"></div>
@@ -305,6 +307,18 @@
     });
   });
 }());
-</script>
+
+  /* ── Phone auto-format (10-digit, (XXX) XXX-XXXX) ───────── */
+  document.addEventListener('input', function(e) {
+    if (e.target.type !== 'tel') return;
+    var digits = e.target.value.replace(/\D/g, '').slice(0, 10);
+    var out = '';
+    if (digits.length > 0) out = '(' + digits.slice(0, 3);
+    if (digits.length >= 4) out += ') ' + digits.slice(3, 6);
+    if (digits.length >= 7) out += '-' + digits.slice(6, 10);
+    else if (digits.length >= 4) out += digits.slice(6);
+    e.target.value = out;
+  });
+  </script>
 </body>
 </html>

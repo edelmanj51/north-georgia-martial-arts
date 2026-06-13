@@ -416,7 +416,7 @@
       <p class="modal-sub">No commitment. No experience needed. Just show up and try it free.</p>
       <form class="modal-form" onsubmit="submitModal(event,'modal-trial','https://services.leadconnectorhq.com/hooks/NGMA_PLACEHOLDER/webhook-trigger/trial')">
         <input type="hidden" name="lead_source" value="trial">
-        <div class="field"><label for="tr-name">Name</label><input id="tr-name" type="text" name="name" placeholder="Your full name" required autocomplete="name"></div>
+        <div class="field"><label for="tr-firstName">First Name</label><input id="tr-firstName" type="text" name="first_name" placeholder="First Name" required autocomplete="given-name"></div><div class="field"><label for="tr-lastName">Last Name</label><input id="tr-lastName" type="text" name="last_name" placeholder="Last Name" required autocomplete="family-name"></div>
         <div class="field"><label for="tr-email">Email</label><input id="tr-email" type="email" name="email" placeholder="your@email.com" required autocomplete="email"></div>
         <div class="field"><label for="tr-phone">Phone</label><input id="tr-phone" type="tel" name="phone" placeholder="(555) 555-5555" required autocomplete="tel"></div>
         <div class="field"><label for="tr-program">Program</label><select id="tr-program" name="program"><option value="" disabled selected>Select a program&hellip;</option><option value="tiny-tigers">Tiny Tigers (Ages 4–7)</option><option value="kids-ma">Kids Martial Arts (Ages 7–15)</option><option value="adult-ma">Adult Martial Arts</option><option value="adult-bjj">Adult BJJ</option><option value="adult-kickboxing">Adult Kickboxing</option><option value="birthday">Birthday Parties</option><option value="not-sure">Not Sure Yet</option></select></div>
@@ -437,7 +437,7 @@
       <p class="modal-sub">Fill out the form and one of our coaches will send you our pricing, schedule, and current promo info.</p>
       <form class="modal-form" onsubmit="submitModal(event,'modal-kit','https://services.leadconnectorhq.com/hooks/NGMA_PLACEHOLDER/webhook-trigger/kit')">
         <input type="hidden" name="lead_source" value="starter_kit">
-        <div class="field"><label for="kit-name">Name</label><input id="kit-name" type="text" name="name" placeholder="Your full name" required autocomplete="name"></div>
+        <div class="field"><label for="kit-firstName">First Name</label><input id="kit-firstName" type="text" name="first_name" placeholder="First Name" required autocomplete="given-name"></div><div class="field"><label for="kit-lastName">Last Name</label><input id="kit-lastName" type="text" name="last_name" placeholder="Last Name" required autocomplete="family-name"></div>
         <div class="field"><label for="kit-email">Email</label><input id="kit-email" type="email" name="email" placeholder="your@email.com" required autocomplete="email"></div>
         <div class="field"><label for="kit-phone">Phone</label><input id="kit-phone" type="tel" name="phone" placeholder="(555) 555-5555" required autocomplete="tel"></div>
         <div class="field"><label for="kit-program">Program</label><select id="kit-program" name="program"><option value="" disabled selected>Select a program&hellip;</option><option value="tiny-tigers">Tiny Tigers (Ages 4–7)</option><option value="kids-ma">Kids Martial Arts (Ages 7–15)</option><option value="adult-ma">Adult Martial Arts</option><option value="adult-bjj">Adult BJJ</option><option value="adult-kickboxing">Adult Kickboxing</option><option value="birthday">Birthday Parties</option><option value="not-sure">Not Sure Yet</option></select></div>
@@ -479,6 +479,18 @@
     setTimeout(function(){if(mid==='modal-trial'){window.location.href='https://api.leadconnectorhq.com/widget/group/NGMA_PLACEHOLDER';}else{var b=document.getElementById(mid+'-body'),s=document.getElementById(mid+'-success');if(b)b.style.display='none';if(s)s.style.display='block';}},550);
   };
 }());
-</script>
+
+  /* ── Phone auto-format (10-digit, (XXX) XXX-XXXX) ───────── */
+  document.addEventListener('input', function(e) {
+    if (e.target.type !== 'tel') return;
+    var digits = e.target.value.replace(/\D/g, '').slice(0, 10);
+    var out = '';
+    if (digits.length > 0) out = '(' + digits.slice(0, 3);
+    if (digits.length >= 4) out += ') ' + digits.slice(3, 6);
+    if (digits.length >= 7) out += '-' + digits.slice(6, 10);
+    else if (digits.length >= 4) out += digits.slice(6);
+    e.target.value = out;
+  });
+  </script>
 </body>
 </html>
