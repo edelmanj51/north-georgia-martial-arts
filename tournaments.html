@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Programs | [SCHOOL_NAME] Martial Arts in [CITY]</title>
-  <meta name="description" content="Explore all martial arts programs at [SCHOOL_NAME] in [CITY] — kids, teens, adults, and competition training.">
+  <title>Upcoming Tournaments | [SCHOOL_NAME] in [CITY], [STATE]</title>
+  <meta name="description" content="Upcoming tournament schedule for [SCHOOL_NAME] competitors. Event dates, class ratings, venues, and directions for every competition.">
   <style>
     *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
     html{scroll-behavior:smooth;font-size:16px}
@@ -65,34 +65,47 @@
     .page-banner{background:linear-gradient(135deg,#07101e 0%,#1a3a6e 100%);color:white;padding:130px 24px 64px;text-align:center}
     .page-banner h1{font-size:clamp(32px,5vw,56px);font-weight:900;line-height:1.1;margin-bottom:14px}
     .page-banner p{font-size:18px;opacity:.8;max-width:600px;margin:0 auto}
-    /* ── Programs ── */
-    #programs-list{padding:80px 24px}
-    .programs-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:32px;max-width:1200px;margin:0 auto}
-    .prog-card{background:var(--white);border-radius:var(--radius-lg);overflow:hidden;box-shadow:var(--shadow);transition:transform .2s,box-shadow .2s}
-    .prog-card:hover{transform:translateY(-5px);box-shadow:var(--shadow-lg)}
-    .prog-photo{
-      /* SWAP: Replace with <img src="program.jpg" alt="Program Name"> */
-      height:240px;background:linear-gradient(135deg,#1a3a6e,#2563eb);
-      display:flex;align-items:center;justify-content:center;
-      color:rgba(255,255,255,.25);font-size:12px;font-weight:700;letter-spacing:2px;text-transform:uppercase
-    }
-    .prog-photo.c1{background:linear-gradient(135deg,#1a3a6e,#2563eb)}
-    .prog-photo.c2{background:linear-gradient(135deg,#0f172a,#1a3a6e)}
-    .prog-photo.c3{background:linear-gradient(135deg,#1e3a5f,#374151)}
-    .prog-photo.c4{background:linear-gradient(135deg,#3b0764,#1e3a5f)}
-    .prog-photo.c5{background:linear-gradient(135deg,#07101e,#1e293b)}
-    .prog-body{padding:28px}
-    .prog-tag{display:inline-block;background:var(--blue-light);color:var(--blue);padding:4px 12px;border-radius:20px;font-size:12px;font-weight:700;letter-spacing:.5px;text-transform:uppercase;margin-bottom:12px}
-    .prog-body h2{font-size:22px;font-weight:800;color:var(--dark);margin-bottom:10px}
-    .prog-body p{font-size:15px;color:var(--gray);line-height:1.65;margin-bottom:18px}
-    .prog-meta{display:flex;gap:16px;margin-bottom:22px;flex-wrap:wrap}
-    .prog-meta span{display:flex;align-items:center;gap:6px;font-size:13px;color:var(--gray);font-weight:600}
-    .prog-meta span::before{content:'';width:6px;height:6px;background:var(--blue);border-radius:50%;flex-shrink:0}
-    .prog-body .btn{width:100%;padding:13px;font-size:15px}
-    /* ── Bottom CTA ── */
-    .programs-cta{background:linear-gradient(135deg,#07101e,#1a3a6e);padding:80px 24px;text-align:center;color:white}
-    .programs-cta h2{font-size:clamp(28px,4vw,44px);font-weight:900;margin-bottom:14px}
-    .programs-cta p{font-size:18px;opacity:.8;margin-bottom:36px;max-width:540px;margin-left:auto;margin-right:auto}
+    /* ── Tournaments section ── */
+    #tournaments{padding:72px 24px}
+    .tourn-intro{text-align:center;max-width:680px;margin:0 auto 52px}
+    .tourn-intro h2{font-size:clamp(26px,3.5vw,38px);font-weight:900;color:var(--dark);margin-bottom:12px}
+    .tourn-intro p{font-size:17px;color:var(--gray)}
+    .tourn-note{display:inline-flex;align-items:center;gap:8px;background:var(--blue-light);color:var(--blue-dark);font-size:14px;font-weight:600;padding:8px 16px;border-radius:20px;margin-top:14px}
+    /* ── Year heading ── */
+    .year-heading{font-size:clamp(20px,2.5vw,26px);font-weight:900;color:var(--dark);margin:0 auto 28px;max-width:1100px;padding-top:8px;border-bottom:2px solid var(--gray-light);padding-bottom:14px}
+    .year-heading+.tourn-grid{margin-top:0}
+    /* ── Tournament grid ── */
+    .tourn-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:24px;max-width:1100px;margin:0 auto 60px}
+    /* ── Tournament card ── */
+    .tourn-card{background:var(--white);border-radius:var(--radius-lg);box-shadow:var(--shadow);padding:24px;display:flex;flex-direction:column;gap:12px;transition:var(--transition);border-top:4px solid var(--gray-light)}
+    .tourn-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-lg)}
+    .tourn-card-top{display:flex;align-items:center;justify-content:space-between;gap:8px}
+    .class-badge{display:inline-block;font-size:11px;font-weight:800;padding:4px 10px;border-radius:20px;letter-spacing:.8px;text-transform:uppercase;white-space:nowrap}
+    .class-aaa{background:#fef3c7;color:#92400e;border:1.5px solid #f59e0b}
+    .class-aa{background:#dbeafe;color:#1e40af;border:1.5px solid #3b82f6}
+    .class-aplus{background:#ede9fe;color:#5b21b6;border:1.5px solid #8b5cf6}
+    .class-a{background:#d1fae5;color:#065f46;border:1.5px solid #10b981}
+    .class-b{background:#f1f5f9;color:#475569;border:1.5px solid #94a3b8}
+    .class-districts{background:#fee2e2;color:#991b1b;border:1.5px solid var(--red)}
+    .class-toc{background:#fef9c3;color:#713f12;border:1.5px solid #ca8a04}
+    .tourn-date{font-size:13px;font-weight:600;color:var(--gray);white-space:nowrap}
+    .tourn-name{font-size:18px;font-weight:800;color:var(--dark);line-height:1.3}
+    .tourn-venue-row{display:flex;align-items:flex-start;gap:8px;font-size:14px;color:var(--dark-2)}
+    .tourn-venue-row svg{width:15px;height:15px;fill:var(--blue);flex-shrink:0;margin-top:2px}
+    .tourn-venue-name{font-weight:600}
+    .tourn-address{font-size:13px;color:var(--gray);line-height:1.5;padding-left:23px}
+    .tourn-map-btn{display:inline-flex;align-items:center;gap:6px;margin-top:4px;font-size:13px;font-weight:700;color:var(--blue);transition:gap .2s;padding-left:23px}
+    .tourn-map-btn:hover{gap:10px;color:var(--blue-dark)}
+    .tourn-map-btn svg{width:14px;height:14px;fill:var(--blue)}
+    .tourn-tbd{font-size:13px;color:var(--gray);font-style:italic;padding-left:23px}
+    /* ── Class legend ── */
+    .class-legend{display:flex;gap:12px;flex-wrap:wrap;justify-content:center;max-width:1100px;margin:0 auto 56px;background:var(--light);border-radius:var(--radius-lg);padding:20px 24px}
+    .class-legend-title{font-size:13px;font-weight:700;color:var(--gray);text-transform:uppercase;letter-spacing:.8px;width:100%;text-align:center;margin-bottom:8px}
+    .legend-badge-item{display:flex;align-items:center;gap:6px;font-size:13px;color:var(--gray)}
+    /* ── CTA ── */
+    .tourn-cta{background:linear-gradient(135deg,#07101e,#1a3a6e);padding:80px 24px;text-align:center;color:white}
+    .tourn-cta h2{font-size:clamp(28px,4vw,44px);font-weight:900;margin-bottom:14px}
+    .tourn-cta p{font-size:18px;opacity:.8;margin-bottom:36px;max-width:540px;margin-left:auto;margin-right:auto}
     .cta-pair{display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
     @media(max-width:480px){.cta-pair{flex-direction:column;align-items:stretch}.cta-pair .btn{width:100%}}
     /* ── Scroll reveal ── */
@@ -190,116 +203,338 @@
 </header>
 
 <section class="page-banner">
-  <h1>Our Programs</h1>
-  <p>Find the perfect program for your age, goals, and schedule — we have something for everyone.</p>
+  <h1>Upcoming Tournaments</h1>
+  <p>Competition schedule for [SCHOOL_NAME] athletes. Train hard, compete, and represent your school on the mat and on the floor.</p>
 </section>
 
-<section id="programs-list">
-  <div class="programs-grid">
+<section id="tournaments">
+  <div class="container">
 
-    <article class="prog-card reveal" id="program-1">
-      <img src="[PROGRAM_1_PHOTO]" alt="[PROGRAM_1_NAME]" loading="lazy" style="width:100%;aspect-ratio:16/9;object-fit:cover">
-      <div class="prog-body">
-        <span class="prog-tag">[PROGRAM_1_AGE_RANGE]</span>
-        <h2>[PROGRAM_1_NAME]</h2>
-        <p>Fun, structured [MARTIAL_ART] classes that build real confidence, discipline, and self-defense skills. Our instructors create a safe, welcoming environment where every student can thrive.</p>
-        <div class="prog-meta">
-          <span>[PROGRAM_1_DAYS]</span>
-          <!-- [IF:PROGRAM_1_SESSION_LEN] --><span>[PROGRAM_1_SESSION_LEN]</span><!-- [/IF:PROGRAM_1_SESSION_LEN] -->
+    <div class="tourn-intro reveal">
+      <h2>2026–2027 Competition Calendar</h2>
+      <p>From local B-class events to World Championships, our athletes compete at every level. Check the schedule below and talk to your instructor about how to register.</p>
+      <span class="tourn-note">Questions about competing? Call us at <a href="tel:[PHONE]" style="color:inherit;font-weight:700">[PHONE]</a></span>
+    </div>
+
+    <!-- Class rating legend -->
+    <div class="class-legend reveal">
+      <div class="class-legend-title">Tournament Class Ratings</div>
+      <div class="legend-badge-item"><span class="class-badge class-aaa">AAA</span> World Championship</div>
+      <div class="legend-badge-item"><span class="class-badge class-aa">AA</span> National / Continental</div>
+      <div class="legend-badge-item"><span class="class-badge class-aplus">A+</span> Prestigious International</div>
+      <div class="legend-badge-item"><span class="class-badge class-a">A</span> Regional A-Level</div>
+      <div class="legend-badge-item"><span class="class-badge class-b">B</span> Regional B-Level</div>
+      <div class="legend-badge-item"><span class="class-badge class-districts">Districts</span> District Championship</div>
+      <div class="legend-badge-item"><span class="class-badge class-toc">TOC</span> Tournament of Champions</div>
+    </div>
+
+    <!-- 2026 -->
+    <h2 class="year-heading reveal">2026</h2>
+    <div class="tourn-grid">
+
+      <div class="tourn-card reveal" style="border-top-color:#ea0404">
+        <div class="tourn-card-top">
+          <span class="class-badge class-districts">Districts</span>
+          <span class="tourn-date">June 5–6, 2026</span>
         </div>
-        <a href="program-1.html" class="btn btn-primary">Learn More</a>
-      </div>
-    </article>
-
-    <!-- [IF:PROGRAM_2_NAME] --><article class="prog-card reveal" id="program-2">
-      <img src="[PROGRAM_2_PHOTO]" alt="[PROGRAM_2_NAME]" loading="lazy" style="width:100%;aspect-ratio:16/9;object-fit:cover">
-      <div class="prog-body">
-        <span class="prog-tag">[PROGRAM_2_AGE_RANGE]</span>
-        <h2>[PROGRAM_2_NAME]</h2>
-        <p>Learn [MARTIAL_ART] in a structured curriculum with real belt standards. Build self-defense skills, get fit, and train in a welcoming community — no experience required.</p>
-        <div class="prog-meta">
-          <span>[PROGRAM_2_DAYS]</span>
-          <!-- [IF:PROGRAM_2_SESSION_LEN] --><span>[PROGRAM_2_SESSION_LEN]</span><!-- [/IF:PROGRAM_2_SESSION_LEN] -->
+        <div class="tourn-name">Southeast Districts</div>
+        <div class="tourn-venue-row">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+          <span class="tourn-venue-name">Gas South Convention Center</span>
         </div>
-        <a href="program-2.html" class="btn btn-primary">Learn More</a>
+        <div class="tourn-address">6400 Sugarloaf Pkwy, Duluth, GA 30097</div>
+        <a class="tourn-map-btn" href="https://www.google.com/maps/search/?api=1&query=6400+Sugarloaf+Pkwy+Duluth+GA+30097" target="_blank" rel="noopener">
+          Get Directions <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
       </div>
-    </article><!-- [/IF:PROGRAM_2_NAME] -->
 
-    <!-- [IF:PROGRAM_3_NAME] --><article class="prog-card reveal" id="program-3">
-      <img src="[PROGRAM_3_PHOTO]" alt="[PROGRAM_3_NAME]" loading="lazy" style="width:100%;aspect-ratio:16/9;object-fit:cover">
-      <div class="prog-body">
-        <span class="prog-tag">[PROGRAM_3_AGE_RANGE]</span>
-        <h2>[PROGRAM_3_NAME]</h2>
-        <p>Develop real [MARTIAL_ART] skills, build strength and focus, and train alongside a welcoming community — no prior experience needed.</p>
-        <div class="prog-meta">
-          <span>[PROGRAM_3_DAYS]</span>
-          <!-- [IF:PROGRAM_3_SESSION_LEN] --><span>[PROGRAM_3_SESSION_LEN]</span><!-- [/IF:PROGRAM_3_SESSION_LEN] -->
+      <div class="tourn-card reveal" style="border-top-color:#f59e0b">
+        <div class="tourn-card-top">
+          <span class="class-badge class-aaa">AAA</span>
+          <span class="tourn-date">July 14–19, 2026</span>
         </div>
-        <a href="program-3.html" class="btn btn-primary">Learn More</a>
-      </div>
-    </article><!-- [/IF:PROGRAM_3_NAME] -->
-
-    <!-- [IF:PROGRAM_4_NAME] --><article class="prog-card reveal" id="program-4">
-      <img src="[PROGRAM_4_PHOTO]" alt="[PROGRAM_4_NAME]" loading="lazy" style="width:100%;aspect-ratio:16/9;object-fit:cover">
-      <div class="prog-body">
-        <span class="prog-tag">[PROGRAM_4_AGE_RANGE]</span>
-        <h2>[PROGRAM_4_NAME]</h2>
-        <p>Take your training to the next level with focused coaching, real competition prep, and a team that pushes you to perform your best.</p>
-        <div class="prog-meta">
-          <span>[PROGRAM_4_DAYS]</span>
-          <!-- [IF:PROGRAM_4_SESSION_LEN] --><span>[PROGRAM_4_SESSION_LEN]</span><!-- [/IF:PROGRAM_4_SESSION_LEN] -->
+        <div class="tourn-name">Worlds 2026</div>
+        <div class="tourn-venue-row">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+          <span class="tourn-venue-name">Phoenix Convention Center</span>
         </div>
-        <a href="program-4.html" class="btn btn-primary">Learn More</a>
+        <div class="tourn-address">100 N 3rd St, Phoenix, AZ 85004</div>
+        <a class="tourn-map-btn" href="https://www.google.com/maps/search/?api=1&query=100+N+3rd+St+Phoenix+AZ+85004" target="_blank" rel="noopener">
+          Get Directions <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
       </div>
-    </article><!-- [/IF:PROGRAM_4_NAME] -->
 
-    <!-- [IF:PROGRAM_5_NAME] --><article class="prog-card reveal" id="program-5">
-      <img src="[PROGRAM_5_PHOTO]" alt="[PROGRAM_5_NAME]" loading="lazy" style="width:100%;aspect-ratio:16/9;object-fit:cover">
-      <div class="prog-body">
-        <span class="prog-tag">[PROGRAM_5_AGE_RANGE]</span>
-        <h2>[PROGRAM_5_NAME]</h2>
-        <p>A specialized [MARTIAL_ART] program designed to challenge and inspire students at every stage of their journey.</p>
-        <div class="prog-meta">
-          <span>[PROGRAM_5_DAYS]</span>
-          <!-- [IF:PROGRAM_5_SESSION_LEN] --><span>[PROGRAM_5_SESSION_LEN]</span><!-- [/IF:PROGRAM_5_SESSION_LEN] -->
+      <div class="tourn-card reveal" style="border-top-color:#94a3b8">
+        <div class="tourn-card-top">
+          <span class="class-badge class-b">B</span>
+          <span class="tourn-date">August 1, 2026</span>
         </div>
-        <a href="program-5.html" class="btn btn-primary">Learn More</a>
-      </div>
-    </article><!-- [/IF:PROGRAM_5_NAME] -->
-
-    <!-- [IF:PROGRAM_6_NAME] --><article class="prog-card reveal" id="program-6">
-      <img src="[PROGRAM_6_PHOTO]" alt="[PROGRAM_6_NAME]" loading="lazy" style="width:100%;aspect-ratio:16/9;object-fit:cover">
-      <div class="prog-body">
-        <span class="prog-tag">[PROGRAM_6_AGE_RANGE]</span>
-        <h2>[PROGRAM_6_NAME]</h2>
-        <p>A specialized [MARTIAL_ART] program designed to challenge and inspire students at every stage of their journey.</p>
-        <div class="prog-meta">
-          <span>[PROGRAM_6_DAYS]</span>
-          <!-- [IF:PROGRAM_6_SESSION_LEN] --><span>[PROGRAM_6_SESSION_LEN]</span><!-- [/IF:PROGRAM_6_SESSION_LEN] -->
+        <div class="tourn-name">Kickin' it at the Beach</div>
+        <div class="tourn-venue-row">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+          <span class="tourn-venue-name">Wilmington Convention Center</span>
         </div>
-        <a href="program-6.html" class="btn btn-primary">Learn More</a>
+        <div class="tourn-address">10 Convention Center Dr, Wilmington, NC 28401</div>
+        <a class="tourn-map-btn" href="https://www.google.com/maps/search/?api=1&query=10+Convention+Center+Dr+Wilmington+NC+28401" target="_blank" rel="noopener">
+          Get Directions <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
       </div>
-    </article><!-- [/IF:PROGRAM_6_NAME] -->
 
-    <article class="prog-card reveal" id="birthday-parties">
-      <img src="images/programs/program-6/main.jpg" alt="Birthday Parties at North Georgia Martial Arts" loading="lazy" style="width:100%;aspect-ratio:16/9;object-fit:cover">
-      <div class="prog-body">
-        <span class="prog-tag">Special Events</span>
-        <h2>Birthday Parties</h2>
-        <p>Celebrate with an action-packed martial arts birthday party. Reach out to learn more.</p>
-        <a href="birthday-parties.html" class="btn btn-primary">Get Details</a>
+      <div class="tourn-card reveal" style="border-top-color:#94a3b8">
+        <div class="tourn-card-top">
+          <span class="class-badge class-b">B</span>
+          <span class="tourn-date">August 29, 2026</span>
+        </div>
+        <div class="tourn-name">Emerald Coast Challenge</div>
+        <div class="tourn-venue-row">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+          <span class="tourn-venue-name">Rigdon Center</span>
+        </div>
+        <div class="tourn-address">1958 Lewis Turner Blvd, Ft. Walton Beach, FL 32547</div>
+        <a class="tourn-map-btn" href="https://www.google.com/maps/search/?api=1&query=1958+Lewis+Turner+Blvd+Fort+Walton+Beach+FL+32547" target="_blank" rel="noopener">
+          Get Directions <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
       </div>
-    </article>
+
+      <div class="tourn-card reveal" style="border-top-color:#10b981">
+        <div class="tourn-card-top">
+          <span class="class-badge class-a">A</span>
+          <span class="tourn-date">Sept 18–19, 2026</span>
+        </div>
+        <div class="tourn-name">Fort Myers, FL</div>
+        <div class="tourn-venue-row">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+          <span class="tourn-venue-name">Caloosa Sound Convention Center</span>
+        </div>
+        <div class="tourn-address">1375 Monroe St, Fort Myers, FL 33901</div>
+        <a class="tourn-map-btn" href="https://www.google.com/maps/search/?api=1&query=1375+Monroe+St+Fort+Myers+FL+33901" target="_blank" rel="noopener">
+          Get Directions <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+
+      <div class="tourn-card reveal" style="border-top-color:#8b5cf6">
+        <div class="tourn-card-top">
+          <span class="class-badge class-aplus">A+</span>
+          <span class="tourn-date">Sept 24–27, 2026</span>
+        </div>
+        <div class="tourn-name">South African Championships</div>
+        <div class="tourn-venue-row">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+          <span class="tourn-venue-name">Jonibach Sport Centre</span>
+        </div>
+        <div class="tourn-address">377 Eeufees St, Pretoria North, Pretoria 0182, South Africa</div>
+        <a class="tourn-map-btn" href="https://www.google.com/maps/search/?api=1&query=377+Eeufees+St+Pretoria+North+Pretoria+South+Africa" target="_blank" rel="noopener">
+          Get Directions <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+
+      <div class="tourn-card reveal" style="border-top-color:#94a3b8">
+        <div class="tourn-card-top">
+          <span class="class-badge class-b">B</span>
+          <span class="tourn-date">September 26, 2026</span>
+        </div>
+        <div class="tourn-name">Memphis, TN</div>
+        <div class="tourn-venue-row">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+          <span class="tourn-venue-name">Venue TBD</span>
+        </div>
+        <div class="tourn-tbd">Location to be announced — check back for updates.</div>
+      </div>
+
+      <div class="tourn-card reveal" style="border-top-color:#94a3b8">
+        <div class="tourn-card-top">
+          <span class="class-badge class-b">B</span>
+          <span class="tourn-date">September 26, 2026</span>
+        </div>
+        <div class="tourn-name">Cordova, TN</div>
+        <div class="tourn-venue-row">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+          <span class="tourn-venue-name">St. Benedict at Auburndale</span>
+        </div>
+        <div class="tourn-address">8250 Varnavas Dr, Cordova, TN 38016</div>
+        <a class="tourn-map-btn" href="https://www.google.com/maps/search/?api=1&query=8250+Varnavas+Dr+Cordova+TN+38016" target="_blank" rel="noopener">
+          Get Directions <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+
+      <div class="tourn-card reveal" style="border-top-color:#94a3b8">
+        <div class="tourn-card-top">
+          <span class="class-badge class-b">B</span>
+          <span class="tourn-date">October 3, 2026</span>
+        </div>
+        <div class="tourn-name">Greenville, SC</div>
+        <div class="tourn-venue-row">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+          <span class="tourn-venue-name">Greenville Convention Center</span>
+        </div>
+        <div class="tourn-address">1 Exposition Dr, Greenville, SC 29607</div>
+        <a class="tourn-map-btn" href="https://www.google.com/maps/search/?api=1&query=1+Exposition+Dr+Greenville+SC+29607" target="_blank" rel="noopener">
+          Get Directions <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+
+      <div class="tourn-card reveal" style="border-top-color:#3b82f6">
+        <div class="tourn-card-top">
+          <span class="class-badge class-aa">AA</span>
+          <span class="tourn-date">Oct 7–10, 2026</span>
+        </div>
+        <div class="tourn-name">Fall Nationals</div>
+        <div class="tourn-venue-row">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+          <span class="tourn-venue-name">David L. Lawrence Convention Center</span>
+        </div>
+        <div class="tourn-address">Pittsburgh, PA</div>
+        <a class="tourn-map-btn" href="https://www.google.com/maps/search/?api=1&query=David+L.+Lawrence+Convention+Center+Pittsburgh+PA" target="_blank" rel="noopener">
+          Get Directions <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+
+      <div class="tourn-card reveal" style="border-top-color:#3b82f6">
+        <div class="tourn-card-top">
+          <span class="class-badge class-aa">AA</span>
+          <span class="tourn-date">Oct 19–21, 2026</span>
+        </div>
+        <div class="tourn-name">Pan-American Instructors' Congress</div>
+        <div class="tourn-venue-row">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+          <span class="tourn-venue-name">Ángel Bustelo Convention Center</span>
+        </div>
+        <div class="tourn-address">Virgen del Carmen de Cuyo 610, Mendoza, Argentina</div>
+        <a class="tourn-map-btn" href="https://www.google.com/maps/search/?api=1&query=Virgen+del+Carmen+de+Cuyo+610+Mendoza+Argentina" target="_blank" rel="noopener">
+          Get Directions <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+
+      <div class="tourn-card reveal" style="border-top-color:#3b82f6">
+        <div class="tourn-card-top">
+          <span class="class-badge class-aa">AA</span>
+          <span class="tourn-date">Oct 22–25, 2026</span>
+        </div>
+        <div class="tourn-name">EXPO PANAM Tournament / Champions</div>
+        <div class="tourn-venue-row">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+          <span class="tourn-venue-name">Arena Maipú Stadium</span>
+        </div>
+        <div class="tourn-address">Emilio Civit 791, Mendoza, Argentina</div>
+        <a class="tourn-map-btn" href="https://www.google.com/maps/search/?api=1&query=Emilio+Civit+791+Mendoza+Argentina" target="_blank" rel="noopener">
+          Get Directions <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+
+      <div class="tourn-card reveal" style="border-top-color:#94a3b8">
+        <div class="tourn-card-top">
+          <span class="class-badge class-b">B</span>
+          <span class="tourn-date">November 7, 2026</span>
+        </div>
+        <div class="tourn-name">Fort Lauderdale, FL</div>
+        <div class="tourn-venue-row">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+          <span class="tourn-venue-name">Broward County Convention Center</span>
+        </div>
+        <div class="tourn-address">1950 Eisenhower Blvd, Fort Lauderdale, FL 33316</div>
+        <a class="tourn-map-btn" href="https://www.google.com/maps/search/?api=1&query=1950+Eisenhower+Blvd+Fort+Lauderdale+FL+33316" target="_blank" rel="noopener">
+          Get Directions <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+
+      <div class="tourn-card reveal" style="border-top-color:#8b5cf6">
+        <div class="tourn-card-top">
+          <span class="class-badge class-aplus">A+</span>
+          <span class="tourn-date">Dec 4–5, 2026</span>
+        </div>
+        <div class="tourn-name">H.U. Lee Classic</div>
+        <div class="tourn-venue-row">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+          <span class="tourn-venue-name">Statehouse Convention Center</span>
+        </div>
+        <div class="tourn-tbd">Address to be confirmed — contact us for details.</div>
+      </div>
+
+    </div><!-- end 2026 grid -->
+
+    <!-- 2027 -->
+    <h2 class="year-heading reveal">2027</h2>
+    <div class="tourn-grid">
+
+      <div class="tourn-card reveal" style="border-top-color:#10b981">
+        <div class="tourn-card-top">
+          <span class="class-badge class-a">A</span>
+          <span class="tourn-date">Jan 15–16, 2027</span>
+        </div>
+        <div class="tourn-name">Memphis, TN</div>
+        <div class="tourn-venue-row">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+          <span class="tourn-venue-name">Renasant Convention Center</span>
+        </div>
+        <div class="tourn-address">255 N Main St, Memphis, TN 38103</div>
+        <a class="tourn-map-btn" href="https://www.google.com/maps/search/?api=1&query=255+N+Main+St+Memphis+TN+38103" target="_blank" rel="noopener">
+          Get Directions <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+
+      <div class="tourn-card reveal" style="border-top-color:#3b82f6">
+        <div class="tourn-card-top">
+          <span class="class-badge class-aa">AA</span>
+          <span class="tourn-date">March 17–20, 2027</span>
+        </div>
+        <div class="tourn-name">2027 Spring Nationals</div>
+        <div class="tourn-venue-row">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+          <span class="tourn-venue-name">Fort Worth, TX</span>
+        </div>
+        <div class="tourn-tbd">Venue to be announced — check back for updates.</div>
+      </div>
+
+      <div class="tourn-card reveal" style="border-top-color:#ca8a04">
+        <div class="tourn-card-top">
+          <span class="class-badge class-toc">TOC</span>
+          <span class="tourn-date">July 20–25, 2027</span>
+        </div>
+        <div class="tourn-name">Tournament of Champions</div>
+        <div class="tourn-venue-row">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+          <span class="tourn-venue-name">Phoenix, AZ</span>
+        </div>
+        <div class="tourn-tbd">Venue to be announced — check back for updates.</div>
+      </div>
+
+      <div class="tourn-card reveal" style="border-top-color:#f59e0b">
+        <div class="tourn-card-top">
+          <span class="class-badge class-aaa">AAA</span>
+          <span class="tourn-date">July 20–25, 2027</span>
+        </div>
+        <div class="tourn-name">Super 20</div>
+        <div class="tourn-venue-row">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+          <span class="tourn-venue-name">Phoenix, AZ</span>
+        </div>
+        <div class="tourn-tbd">Venue to be announced — check back for updates.</div>
+      </div>
+
+      <div class="tourn-card reveal" style="border-top-color:#3b82f6">
+        <div class="tourn-card-top">
+          <span class="class-badge class-aa">AA</span>
+          <span class="tourn-date">Oct 6–9, 2027</span>
+        </div>
+        <div class="tourn-name">Fall Nationals</div>
+        <div class="tourn-venue-row">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+          <span class="tourn-venue-name">St. Louis, MO</span>
+        </div>
+        <div class="tourn-tbd">Venue to be announced — check back for updates.</div>
+      </div>
+
+    </div><!-- end 2027 grid -->
 
   </div>
 </section>
 
-<section class="programs-cta">
-  <h2>Not Sure Which Program Is Right For You?</h2>
-  <p>Book a free trial and we'll help you find the perfect fit — no experience needed, no pressure.</p>
+<section class="tourn-cta">
+  <h2>Ready to Compete?</h2>
+  <p>Talk to your instructor about tournament registration and how to prepare. Our coaches have produced state and national champions — let us help you get there.</p>
   <div class="cta-pair">
     <button class="btn btn-primary" onclick="openModal('modal-trial')">Book Free Trial</button>
-    <button class="btn btn-ghost" onclick="openModal('modal-kit')">Get Pricing &amp; Schedule</button>
+    <button class="btn btn-ghost" onclick="openModal('modal-kit')">Get Pricing Guide</button>
   </div>
 </section>
 
@@ -321,8 +556,8 @@
     <div class="footer-col">
       <h4>Programs</h4>
       <ul>
-        <li><a href="programs.html#program-1">[PROGRAM_1_NAME]</a></li>
-        <!-- [IF:PROGRAM_2_NAME] --><li><a href="programs.html#program-2">[PROGRAM_2_NAME]</a></li><!-- [/IF:PROGRAM_2_NAME] -->
+        <li><a href="program-1.html">[PROGRAM_1_NAME]</a></li>
+        <!-- [IF:PROGRAM_2_NAME] --><li><a href="program-2.html">[PROGRAM_2_NAME]</a></li><!-- [/IF:PROGRAM_2_NAME] -->
         <!-- [IF:PROGRAM_3_NAME] --><li><a href="program-3.html">[PROGRAM_3_NAME]</a></li><!-- [/IF:PROGRAM_3_NAME] -->
 
         <!-- [IF:PROGRAM_4_NAME] --><li><a href="program-4.html">[PROGRAM_4_NAME]</a></li><!-- [/IF:PROGRAM_4_NAME] -->
@@ -341,6 +576,7 @@
         <li><a href="#" onclick="openModal('modal-kit');return false">Pricing &amp; Schedule</a></li>
         <li><a href="reviews.html">Reviews</a></li>
         <li><a href="index.html#instructors">Our Coaches</a></li>
+        <li><a href="tournaments.html">Tournaments</a></li>
         <li><a href="news.html">News</a></li>
         <li><a href="#">Privacy Policy</a></li>
         <li><a href="#">Terms of Service</a></li>
