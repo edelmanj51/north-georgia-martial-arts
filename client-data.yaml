@@ -154,11 +154,11 @@ REVIEWER_5_DATE: "5 months ago"
 REVIEWER_5_TEXT: "The BJJ professor is an awesome instructor and became a good friend. Great community, great coaching — highly recommend."
 
 # ── GHL Webhooks — PLACEHOLDER values, replace before launch ─────────────────
-TRIAL_WEBHOOK_URL: "https://services.leadconnectorhq.com/hooks/NGMA_PLACEHOLDER/webhook-trigger/trial"
-STARTER_KIT_WEBHOOK_URL: "https://services.leadconnectorhq.com/hooks/NGMA_PLACEHOLDER/webhook-trigger/kit"
-QUIZ_WEBHOOK_URL: "https://services.leadconnectorhq.com/hooks/NGMA_PLACEHOLDER/webhook-trigger/quiz"
-FINAL_CTA_WEBHOOK_URL: "https://services.leadconnectorhq.com/hooks/NGMA_PLACEHOLDER/webhook-trigger/final"
-BOOKING_CALENDAR_URL: "https://api.leadconnectorhq.com/widget/group/NGMA_PLACEHOLDER"
+TRIAL_WEBHOOK_URL: "https://services.leadconnectorhq.com/hooks/M0EdDtKtbq90KC47t2Ia/webhook-trigger/2aDHQDUckITDRvaGBTI4"
+STARTER_KIT_WEBHOOK_URL: "https://services.leadconnectorhq.com/hooks/M0EdDtKtbq90KC47t2Ia/webhook-trigger/2aDHQDUckITDRvaGBTI4"
+QUIZ_WEBHOOK_URL: "https://services.leadconnectorhq.com/hooks/M0EdDtKtbq90KC47t2Ia/webhook-trigger/2aDHQDUckITDRvaGBTI4"
+FINAL_CTA_WEBHOOK_URL: "https://services.leadconnectorhq.com/hooks/M0EdDtKtbq90KC47t2Ia/webhook-trigger/2aDHQDUckITDRvaGBTI4"
+BOOKING_CALENDAR_URL: "https://api.leadconnectorhq.com/widget/group/BwJIeEj7NWGUBrjxvHn4"
 
 # ── Privacy policy ────────────────────────────────────────────────────────────
 PRIVACY_POLICY_URL: "https://www.northgeorgiamartialarts.com/privacy"
